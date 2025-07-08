@@ -1,0 +1,742 @@
+[
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "0",
+    "text": "Acta Poloniae Pharmaceutica \u00f1 Drug Research, Vol. 71 No. 1 pp. 11\u00f123, 2014 ISSN 0001-6837\nPolish Pharmaceutical Society\nPARACETAMOL: MECHANISM OF ACTION, APPLICATIONS\nAND SAFETY CONCERN\nMARTA J\u201d\u00e8WIAK-B BENISTA* andJERZY Z. NOWAK\nDepartment of Pharmacology, Chair of Pharmacology and Clinical Pharmacology\nat the Medical University of \u00a3\u00dbd\u00fc, \u00d8eligowskiego 7/9, 90-752 \u00a3\u00dbd\u00fc, Poland\nAbstract: Paracetamol / acetaminophen is one of the most popular and most commonly used analgesic and\nantipyretic drugs around the world, available without a prescription, both in mono- and multi-component prepa-\nrations. It is the drug of choice in patients that cannot be treated with non-steroidal anti-inflammatory drugs\n(NSAID), such as people with bronchial asthma, peptic ulcer disease, hemophilia, salicylate-sensitized people,\nchildren under 12 years of age, pregnant or breastfeeding women. It is recommended as a first-line treatment\nof pain associated with osteoarthritis.",
+    "start_char": 0,
+    "end_char": 963,
+    "char_count": 963,
+    "vector_id": 0
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "1",
+    "text": "disease, hemophilia, salicylate-sensitized people,\nchildren under 12 years of age, pregnant or breastfeeding women. It is recommended as a first-line treatment\nof pain associated with osteoarthritis. The mechanism of action is complex and includes the effects of both the\nperipheral (COX inhibition), and central (COX, serotonergic descending neuronal pathway, L-arginine/NO\npathway, cannabinoid system) antinociception processes and \u00ecredox\u00ee mechanism. Paracetamol is well tolerat-\ned drug and produces few side effects from the gastrointestinal tract, however, despite that, every year, has seen\na steadily increasing number of registered cases of paracetamol-induced liver intoxication all over the world.\nGiven the growing problem of the safety of acetaminophen is questioned the validity of the sale of the drug\nwithout a prescription. This work, in conjunction with the latest reports on the mechanism of action of parac-\netamol, trying to point out that it is not a panacea devoid of side effe",
+    "start_char": 763,
+    "end_char": 1763,
+    "char_count": 999,
+    "vector_id": 1
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "2",
+    "text": "sale of the drug\nwithout a prescription. This work, in conjunction with the latest reports on the mechanism of action of parac-\netamol, trying to point out that it is not a panacea devoid of side effects, and indeed, especially when is taken\nregularly and in large doses (> 4 g/day), there is a risk of serious side effects.\nKeywords: paracetamol, acetaminophen, toxic effects, mechanism of action, cyclooxygenase, cannabinoid,\nserotonergic, prostaglandin-endoperoxide synthases\nParacetamol (an international name used in\nEurope) and acetaminophen(an international name\nused in the USA) are two official names of the same\nchemical compound derived from its chemical name:\nN-acetyl-para-aminophenol (the segment \u00eb\u00edcet\u00ed\u00ed\ninserted between \u00eb\u00edpara\u00ed\u00ed and \u00eb\u00edamino\u00ed\u00ed) and N-\nacetyl-para-aminophenol. This drug has a long his-\ntory and, as it often happens with important discov-\neries, it was found by chance. In the 80s of the 19th\ncentury, two young doctors at the University of\nStrasburg, in order to erad",
+    "start_char": 1563,
+    "end_char": 2563,
+    "char_count": 1000,
+    "vector_id": 2
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "3",
+    "text": "g has a long his-\ntory and, as it often happens with important discov-\neries, it was found by chance. In the 80s of the 19th\ncentury, two young doctors at the University of\nStrasburg, in order to eradicate worms by mistake\ndispensed acetanilide to a patient instead of naphtha- Figure 1. Chemical structure of analgesics - aniline derivatives.\nlene (Fig. 1). They noticed that the drug had a small Phenacetin until the 80s of the 20th century was included in the\nimpact on intestinal parasites, however, it signifi- composition of numerous mixtures. Saridon (Roche firm) and the\nso-called in Polish \u00ectablets with cross\u00ee produced by Polpharma\ncantly decreased high temperature. Young doctors -\nSA in Starogard Gda\u00d2ski (previously Starogardzkie Zak\u2265ady\nArnold Chan and Paul Heppa - quickly published Farmaceutyczne Polfa) and Marcmed from Lublin are the most\ntheir discovery and acetanilide was introduced into well-known preparations. Due to its carcinogenic action damaging\nmedical practice in 1886 u",
+    "start_char": 2363,
+    "end_char": 3363,
+    "char_count": 1000,
+    "vector_id": 3
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "4",
+    "text": "rmaceutyczne Polfa) and Marcmed from Lublin are the most\ntheir discovery and acetanilide was introduced into well-known preparations. Due to its carcinogenic action damaging\nmedical practice in 1886 under the name of the kidneys and the liver as well as the patients\u00ed tendency towards\nan overuse, the drug was withdrawn from the American market in\nantifebrin (1). Soon it appeared that although the pro-\n1983 (in Saridon, phenacetin was replaced by paracetamol). In\nduction of this drug was very cheap, acetanilide Poland, it happened as late as in 2004\n* Corresponding author: e-mail: marta.jozwiak-bebenista@umed.lodz.pl; phone/fax: +48 42 639-32-90\n11\n\n12 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nFigure 2. Paracetamol on the WHO analgesic ladder (the rules for using analgesics, which consider individual intensity of pain).\ncould not be used as an antipyretic medicament due The use of paracetamol\nto its high toxicity, the most alarming of which was Paracetamol was introduced into the pharma-",
+    "start_char": 3163,
+    "end_char": 4163,
+    "char_count": 1000,
+    "vector_id": 4
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "5",
+    "text": "ndividual intensity of pain).\ncould not be used as an antipyretic medicament due The use of paracetamol\nto its high toxicity, the most alarming of which was Paracetamol was introduced into the pharma-\nmethemoglobinemia. This resulted in a great deal of cological market in 1955 by McNeil Laboratories as\nresearch on less toxic derivatives of acetanilide. a prescribed analgesic and antipyretic drug for chil-\nPhenacetin and N-acetyl-p-aminophenol appeared to dren under its trade name Tylenol Children\u00eds Elixir\nbe the most satisfying compounds, which had been (the name tylenol derives from its chemical name \u00f1\nearlier synthesized by Harmon Northrop Morse in N-acetyl-p-aminophenol). One year later, 500-mg\n1878 (Fig. 1) (2). The first clinical trials with those tablets of paracetamol were available over the\ntwo acetanilide derivatives were performed by a counter in Great Britain under the trade name of\nGerman pharmacologist Joseph von Mering. On the Panadol, which were produced by Frederick Ste",
+    "start_char": 3963,
+    "end_char": 4963,
+    "char_count": 1000,
+    "vector_id": 5
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "6",
+    "text": "over the\ntwo acetanilide derivatives were performed by a counter in Great Britain under the trade name of\nGerman pharmacologist Joseph von Mering. On the Panadol, which were produced by Frederick Stearns\nbasis of the obtained results, a faulty conclusion was & Co, the branch of Sterling Drug Inc. In Poland,\ndrawn that paracetamol was characterized by high paracetamol became available in 1961 and since\ntoxicity similar to acetanilide, therefore phenacetin then it has belonged to the one of the most frequent-\nwas the first derivative to be introduced into medical ly sold analgesic medications. There are about a 100\npractice in 1887. Phenacetin was widely used in preparations in the trade offer, which contain para-\nanalgesic mixtures until the time when it was associ- cetamol alone or in combination with other active\nated with the development of analgesic nephropathy substances.\nafter a prolonged usage (3). In Poland, phenacetin The paracetamol place on the WHO analgesic\nwas used as a co",
+    "start_char": 4763,
+    "end_char": 5763,
+    "char_count": 999,
+    "vector_id": 6
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "7",
+    "text": "bination with other active\nated with the development of analgesic nephropathy substances.\nafter a prolonged usage (3). In Poland, phenacetin The paracetamol place on the WHO analgesic\nwas used as a component of very popular and avail- ladder, which precisely defines the rules for applica-\nable everywhere analgesic \u00eb\u00edtablets with the cross\u00ed\u00ed. tion of analgesic drugs, is impressive. This drug has\nIn fact, acetaminophen/paracetamol became popular been placed on all three steps of pain treatment\nhalf a year later in 1948 when Bernard Brodie and intensity. In different pains of moderate intensity,\nJulius Axelrod demonstrated that paracetamol was paracetamol as a weak analgesic together with non-\nthe main active metabolite of acetanilide and steroidal analgesic drugs or coanalgesics (e.g., caf-\nphenacetin responsible for their analgesic and feine) is a basic non-opioid analgesic (the first step\nantipyretic action and that methemoglobinemia was of the analgesic ladder). When pain maintains or",
+    "start_char": 5563,
+    "end_char": 6563,
+    "char_count": 1000,
+    "vector_id": 7
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "8",
+    "text": "phenacetin responsible for their analgesic and feine) is a basic non-opioid analgesic (the first step\nantipyretic action and that methemoglobinemia was of the analgesic ladder). When pain maintains or\ninduced by another metabolite, phenylhydroxyl- increases, paracetamol is used as an additional anal-\namine (4). That discovery revolutionized the phar- gesic with weak (e.g., caffeine, tramadol) or strong\nmaceutical market of analgesic drugs and since then (e.g., morphine, phentanyl) opioids from the second\nparacetamol has started its staggering career. and third step of the analgesic ladder, respectively,\n\nParacetamol: mechanism of action, applications and safety concern 13\nFig. 2). Paracetamol, if efficient, is a recommended dosage schedules in pediatric patients should be as\noral analgesic of a first choice to be used for a long follows: 10-15 mg/kg oral dose and 15-20 mg/kg\ntime, e.g., in symptomatic treatment of slight and rectal dose every 4-6 h, maximum of 5 doses/day; in\nmoderate",
+    "start_char": 6363,
+    "end_char": 7363,
+    "char_count": 999,
+    "vector_id": 8
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "9",
+    "text": "of a first choice to be used for a long follows: 10-15 mg/kg oral dose and 15-20 mg/kg\ntime, e.g., in symptomatic treatment of slight and rectal dose every 4-6 h, maximum of 5 doses/day; in\nmoderate pain occurring in osteoarthritis as well as newborns orally or rectally 10 mg/kg of body weight\nin muscle or tendon pains. Moreover, it is a drug of every 4 h or 15 mg/kg every 6 h (maximum daily\nchoice in patients in whom application of non- dose in newborns is 60 mg/kg).\nsteroidal anti-inflammatory drugs (NSAIDs) are\ncontraindicated, e.g., in the case of gastric ulcers, Mechanism of action\nhypersensitivity to aspirin, impairments in blood Although paracetamol was discovered over\ncoagulation, in pregnant women, nursing mothers 100 years ago and has been widely used in medical\nand children with fever accompanying a disease (5). practice for more than half the century, its mecha-\nThe use of paracetamol in children requires special nism of action has not been elucidated until now (7).\ncare a",
+    "start_char": 7163,
+    "end_char": 8163,
+    "char_count": 999,
+    "vector_id": 9
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "10",
+    "text": "h fever accompanying a disease (5). practice for more than half the century, its mecha-\nThe use of paracetamol in children requires special nism of action has not been elucidated until now (7).\ncare and maintain in an adequate dosage (based on It has analgesic and antipyretic properties similarly\nage), which significantly differs from standard adult. to NSAIDs, but contrary to them, it does not possess\nThe recommended dosage for children consider the any anti-inflammatory activity. When applied in\nmetabolism of paracetamol, which determines the recommended doses, it does not induce typical for\ntoxicity of the drug, especially hepatotoxicity (see NSAIDs gastrointestinal side effects. However, it\nbelow). In children, paracetamol metabolism suppresses prostaglandin production likewise\nchanges with age: in younger children the sulfation NSAIDs.\npathway is dominated route of paracetamol elimina- Due to lack of an anti-inflammatory compo-\ntion (which is mature at birth); the glucuronidation",
+    "start_char": 7963,
+    "end_char": 8963,
+    "char_count": 999,
+    "vector_id": 10
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "11",
+    "text": "with age: in younger children the sulfation NSAIDs.\npathway is dominated route of paracetamol elimina- Due to lack of an anti-inflammatory compo-\ntion (which is mature at birth); the glucuronidation nent, paracetamol has not been regarded as a mem-\npathway takes about two years to mature. The oxi- ber of the NSAIDs family in pharmacological text-\ndation of paracetamol, which takes place mainly books, although what is interesting, it has been\nwith the participation of the enzyme CYP2E1 in always discussed together with these drugs.\nneonates is negligible, because the activity of Therefore, the discussion on the mechanism of\nCYP2E1 increases with age, reaching the adult action of paracetamol should begin from the analy-\nvalue at age 1-10 years. For comparison, in adults, sis of NSAIDs action.\nparacetamol is metabolized mainly in the liver via All conventional NSAIDs inhibit the conver-\nglucuronidation (50-60%), sulfation (25-30%) and tion of arachidonic acid (AA) into prostaglandin H -",
+    "start_char": 8763,
+    "end_char": 9763,
+    "char_count": 998,
+    "vector_id": 11
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "12",
+    "text": "n.\nparacetamol is metabolized mainly in the liver via All conventional NSAIDs inhibit the conver-\nglucuronidation (50-60%), sulfation (25-30%) and tion of arachidonic acid (AA) into prostaglandin H -\noxidation (< 10%) (see below in the section on PGH. The stage is catalyzed by prostaglandin H\n2\nadverse effects). Therefore, according to Ji et al. (6), synthase (PGHS), at present referred to as cyclooxy-\nthe proposed dosage of paracetamol in children up genase (COX) within which isoenzymes COX-1\nto 12 years is as follows: (PGHS-1) and COX-2 (PGHS-2) occur (8). The\n\u25cf under 2 years \u00f1 no recommended dose; treatment prevalence and the role of the third isoenzyme\nunder the supervision of a physician; COX-3 is the subject of ongoing to date discussions\n\u25cf 2-3 years \u00f1 160 mg (daily dose divided into two (read further). PGHS is a bifunctional enzyme and\ndose units, i.e., 2 \u25ca 80 mg); total dose corresponds possesses two different enzymatic activities:\nto 1/2 of a single dose for an adult, i.e., 32",
+    "start_char": 9563,
+    "end_char": 10563,
+    "char_count": 1000,
+    "vector_id": 12
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "13",
+    "text": "two (read further). PGHS is a bifunctional enzyme and\ndose units, i.e., 2 \u25ca 80 mg); total dose corresponds possesses two different enzymatic activities:\nto 1/2 of a single dose for an adult, i.e., 325 mg; cyclooxygenase and peroxidase (POX). The conver-\n\u25cf 4-6 years \u00f1 240 mg (daily dose divided into three sion of AA\u2192PGH involves two reactions: cycliza-\n2\ndose units, i.e., 3 \u25ca 80 mg); total dose corresponds tion of AA to unstable 15-hydroxyperoxide (PGG)\n2\nto 3/4 of a single dose for an adult; with the involvement of a cyclooxygenase compo-\n\u25cf 6-9 years \u00f1 320 mg (daily dose divided into four nent and double oxidation in position 9 and 11;\ndose units, i.e., 4 \u25ca 80 mg); total dose is the same whereas the reduction of PGG molecule to its 15-\n2\nas a single dose for an adult; hydroxy analogue, unstable structure of PGH, takes\n2\n\u25cf 9-11 years \u00f1 320-400 mg (daily dose divided into place due to peroxidase activity of PGHS (POX).\nfour-five dose units, i.e., 4-5 \u25ca 80 mg; total dose Prostaglandin H",
+    "start_char": 10363,
+    "end_char": 11363,
+    "char_count": 998,
+    "vector_id": 13
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "14",
+    "text": "stable structure of PGH, takes\n2\n\u25cf 9-11 years \u00f1 320-400 mg (daily dose divided into place due to peroxidase activity of PGHS (POX).\nfour-five dose units, i.e., 4-5 \u25ca 80 mg; total dose Prostaglandin H (PGH2) is a substrate for spe-\n2\ncorresponds to 1-1 1/4 of a single dose for an cific synthases, tissue-dependent isomerases\nadult; catalysing its further conversions into different\n\u25cf 11-12 years \u00f1 320-480 mg (daily dose divided in endogenous regulators, namely: prostaglandins of the\nthe four-six dose units, i.e 4-6 \u25ca 80 mg; total dose D (PGD), E (PGE), F (PGF) series and prostacyclin\n2 2 2\ncorresponds to 1 \u00f1 1 1/2 of a single dose for an (PGI; prostacyclin is not a prostaglandin and a com-\n2\nadult. monly used abbreviation is historically conditioned)\nAccording to the 20th edition of Drugs of and thromboxanes (TXA and TXB). They all are\n2 2\nContemporary Therapy (Polish),the acetaminophen characterized by different biological activity and\n\n14 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nmany o",
+    "start_char": 11163,
+    "end_char": 12163,
+    "char_count": 1000,
+    "vector_id": 14
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "15",
+    "text": "and thromboxanes (TXA and TXB). They all are\n2 2\nContemporary Therapy (Polish),the acetaminophen characterized by different biological activity and\n\n14 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nmany of them have anti-inflammatory properties. etamol decreased prostaglandin synthesis ten times\nThus, the action of NSAIDs, which inhibits the stage stronger in the brain than in the spleen (18).1\nof conversion AA\u2192PGH, and also the formation of At that time COX isoforms were not known\n2\nthe aforementioned regulators, have some favorable because isoenzyme, COX-2, was identified only at\n(anti-inflammatory, analgesic and antipyretic) and the beginning of the 90s of the previous century (25,\nside effects (associated with the inhibition of synthe- 26). Ten years later, the experiments performed on\nsis of particular regulators in different tissues). A pre- the dog\u00eds brain tissue revealed the presence of the\ncise mechanism of NSAID action together with ther- third COX isoform, COX-3, which demonstra",
+    "start_char": 11963,
+    "end_char": 12963,
+    "char_count": 1000,
+    "vector_id": 15
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "16",
+    "text": "of particular regulators in different tissues). A pre- the dog\u00eds brain tissue revealed the presence of the\ncise mechanism of NSAID action together with ther- third COX isoform, COX-3, which demonstrated\napeutic and side effects has been presented in the special sensitivity to paracetamol (27). However, it\nrecently published large study by Nowak and soon appeared that so sensitive to paracetamol\nDzielska-Olczak (9) and Nowak (10, 11). COX-3 does not function in the human organism.\nWhile traditional NSAIDs and selective COX2 The human analogue of dog\u00eds COX-3, which occurs\ninhibitors inhibit cyclooxygenase (PGHS) through in some tissues especially of the central nervous sys-\ncompeting with arachidonic acid for the active site of tem, is an alternative splice variant of COX-1 with-\nthe enzyme (12), paracetamol is likely to act as a fac- out a preferential sensitivity to paracetamol, encod-\ntor reducing a ferryl protoporphyrin IX radical cation ing proteins of amino acid sequence different",
+    "start_char": 12763,
+    "end_char": 13763,
+    "char_count": 999,
+    "vector_id": 16
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "17",
+    "text": "(12), paracetamol is likely to act as a fac- out a preferential sensitivity to paracetamol, encod-\ntor reducing a ferryl protoporphyrin IX radical cation ing proteins of amino acid sequence different from\n(Fe4+=OPP*+) within the peroxidase site of the PGHS COX and not exhibiting COX activity (28-30).\nenzyme. In turn, the Fe4+=OPP*+ generates tyrosine Thus, COX-3 involvement in the mechanism of\nradicals in the place of PGHS cyclooxygenase, action of paracetamol in humans has not been justi-\nwhich are essential for catalyzation of AA oxidation fied, which has been confirmed by Kis et al. as well\nreaction (12-16) (Fig. 3). Due to a fact that hydroper- as by Hinz and Brune (15, 29). However, the dis-\noxides of fatty acids, like PGG (reduced by POX), cussions regarding a potential role of identified three\n2\noxidize porphyrin within the peroxidase site of the COX isoenzymes in the mechanism of paracetamol\nenzyme, cyclooxygenase inhibition by paracetamol action are still being continued (31-",
+    "start_char": 13563,
+    "end_char": 14563,
+    "char_count": 999,
+    "vector_id": 17
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "18",
+    "text": "tified three\n2\noxidize porphyrin within the peroxidase site of the COX isoenzymes in the mechanism of paracetamol\nenzyme, cyclooxygenase inhibition by paracetamol action are still being continued (31-34).\nis difficult in the presence of high peroxide levels. The concept regarding COX-dependent central\nGraham and Scott suggested that paracetamol should mechanism of paracetamol action has not stood the\nbe classified to the group of the so-called atypical test of time (29). Firstly, the studies by Graham and\nNSAIDs, determined as peroxide sensitive analgesic Scott have shown that paracetamol really inhibited\nand antipyretic drugs (PSAAD) (17). prostaglandin synthesis in well-functioning cells,\nFor the last decades, it was thought that para- however, it did not exert the same effect in the tis-\ncetamol reveals analgesic and antipyretic properties sue/cell homogenate, where the concentration of\nby acting centrally and its inhibitory effect on COX- arachidonic acid is low (35). Secondly, par",
+    "start_char": 14363,
+    "end_char": 15363,
+    "char_count": 1000,
+    "vector_id": 18
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "19",
+    "text": "-\ncetamol reveals analgesic and antipyretic properties sue/cell homogenate, where the concentration of\nby acting centrally and its inhibitory effect on COX- arachidonic acid is low (35). Secondly, paracetamol\n1 and COX-2 activity, i.e., prostaglandin synthesis has been found to have an inhibitory impact on\nwas low. This concept was based on the original COX-1 and COX-2 activity in peripheral tissues,\nresearch carried out by Vane and colleagues, which although not to the same extent, since a stronger\nwas published at the beginning of the 70s of the pre- effect was always observed in relation to COX-2,\nvious century. Those authors observed that parac- especially in the cells of the vascular endothelium.\n1In numerous academic textbooks including those published during the last decade, the central mechanism of paracetamol action has been\ndiscussed emphasizing its weaker inhibitory effect on the cyclooxygenase activity and prostaglandin production as compared to NSAIDs.\nThe early study by F",
+    "start_char": 15163,
+    "end_char": 16163,
+    "char_count": 1000,
+    "vector_id": 19
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "20",
+    "text": "tral mechanism of paracetamol action has been\ndiscussed emphasizing its weaker inhibitory effect on the cyclooxygenase activity and prostaglandin production as compared to NSAIDs.\nThe early study by Flower and Vane from 1972 in the prestige magazine Natureannounced the mechanism of paracetamol activity even\nin its title: \u00eeInhibition of prostaglandin synthetase in brain explains the antipyretic activity of paracetamol (4-acetamidophenol)\u00ee (18).\nScientific prestige of the future Nobel prize winner, John R. Vane, was so high that despite later published articles, which did not com-\npletely confirm the original results of the British researchers (19-21) that study was still citied and its results were considered the substan-\ntial basis of the mechanism of paracetamol action for many pharmacologists and doctors.\nFlower and Vane indicated that prostaglandin production in the brain was 10-fold more sensitive to paracetamol action than in the\nspleen (18). At that time, John R. Vane, the future",
+    "start_char": 15963,
+    "end_char": 16963,
+    "char_count": 1000,
+    "vector_id": 20
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "21",
+    "text": "gists and doctors.\nFlower and Vane indicated that prostaglandin production in the brain was 10-fold more sensitive to paracetamol action than in the\nspleen (18). At that time, John R. Vane, the future Noble Prize winner in physiology and medicine (John R. Vane, Sune K. Bergstrom and\nBengt I. Samuelsson \u00f1 \u00eeNobel Prize\u00ee in 1982 for discoveries on prostaglandin and related biologically active substances) was the author\nof many other essential for medicine innovative observations that were published in prestige magazines, e.g. \u00ecInhibition of prostaglandin\nsynthesis as a mechanism of action for aspirin-like drugs\u00ee (22). John Vane, using a guinea pig lung homogenate in his study, concluded\nthat analgesic, antipyretic and anti-inflammatory action of aspirin, indomethacin and salicylate is associated with a lower prostaglandin\nproduction resulting from cyclooxygenase inhibition (COX). Other articles published in the same magazine Nature by Vane et al.:\n\u00eeIndomethacin and aspirin abolish prostag",
+    "start_char": 16763,
+    "end_char": 17763,
+    "char_count": 1000,
+    "vector_id": 21
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "22",
+    "text": "ted with a lower prostaglandin\nproduction resulting from cyclooxygenase inhibition (COX). Other articles published in the same magazine Nature by Vane et al.:\n\u00eeIndomethacin and aspirin abolish prostaglandin release from spleen\u00ee and by Smith and Willis: \u00ecAspirin selectively inhibits prostaglandin\nproduction in human platelets\u00ee contained the results confirming those observations (23, 24). It is worth remembering that COX isoenzymes\nwere not discovered at that time.\n\nParacetamol: mechanism of action, applications and safety concern 15\nFigure 3. The complex of prostaglandin H synthase (PGHS) including two components: cyclooxygenase (COX) and hydroperoxidase\n(POX) is a bifunctional enzyme, responsible for the metabolism of arachidonic acid (AA) to prostaglandin PGH. The reaction occurs via\n2\ntwo stages: 1. AA oxidation to PGG depends on tyrosine radical (Tyr385*) in the COX site. 2.PGG undergoes reduction to PGH in the\n2 2 2\nPOX site, which results in the oxidation of the peroxidase heme ra",
+    "start_char": 17563,
+    "end_char": 18563,
+    "char_count": 1000,
+    "vector_id": 22
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "23",
+    "text": "o stages: 1. AA oxidation to PGG depends on tyrosine radical (Tyr385*) in the COX site. 2.PGG undergoes reduction to PGH in the\n2 2 2\nPOX site, which results in the oxidation of the peroxidase heme radical. 3.A formed ferryl protoporphyrin IX radical cation (Fe4+=OPP*+)\ngenerates Tyr385* radicals. Thus, the POX part is \u00ecself-sufficient\u00ee, whereas COX depends on POX. Paracetamol reduces an iron cation in\nprotoporphyrin IX radical (Fe4+=OPP*+) in the POX part, which contributes to a lower amount of Tyr385*radical formation. Abbreviations:\nAA \u00f1 arachidonic acid; AA*\u00f1 arachidonic acid radical; A*- oxidized cosubstrate; AH \u00f1 reduced cosubstrate; Fe3+- enzyme at rest; Fe4+=O\n\u00f1 protoporphyrin IX (heme); Fe4+=OPP*+ - protoporphyrin radical IX; HPETE \u00f1 hydroperoxides of fatty acids; PGG*- prostaglandin G\n2 2\ncontaining peroxide radical; PGH \u00f1 prostaglandin H; ROH \u00f1 alcohol; Tyr385* \u00f1 tyrosine radical (12, 16, 38).\n2\nHinz et al. indicated that orally administered para- Data concerning central act",
+    "start_char": 18363,
+    "end_char": 19363,
+    "char_count": 1000,
+    "vector_id": 23
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "24",
+    "text": "din G\n2 2\ncontaining peroxide radical; PGH \u00f1 prostaglandin H; ROH \u00f1 alcohol; Tyr385* \u00f1 tyrosine radical (12, 16, 38).\n2\nHinz et al. indicated that orally administered para- Data concerning central action of paracetamol\ncetamol at a dose of 1 g inhibited 80% of the COX- through its effect on descending serotoninergic path-\n2 activity in human blood monocytes (36). The ways do not exclude a hypothesis assuming the pres-\nresults of extensive studies by Hinz and Brune pub- ence (or coexistence) of the inhibition of\nlished in the years 2006-2012 reveal that paraceta- prostaglandin synthesis (35). Prostaglandin PGE\n2\nmol is a preferential inhibitor of COX-2 isoenzyme, modulates numerous physiological processes and\nhowever, its effect depends to a great extent on the can also modulate nociceptive and autonomic\nstate of environmental oxidation/reduction (redox) processes viaits influence on descending serotonin-\n(15, 37). ergic antinociceptive system (41).\nAmong other possibilities of the cent",
+    "start_char": 19163,
+    "end_char": 20163,
+    "char_count": 1000,
+    "vector_id": 24
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "25",
+    "text": "and autonomic\nstate of environmental oxidation/reduction (redox) processes viaits influence on descending serotonin-\n(15, 37). ergic antinociceptive system (41).\nAmong other possibilities of the central action Novel studies on the mechanism of action of\nof paracetamol, its stimulating effect on descending paracetamol regard it as a pro-drug, which due to its\nserotoninergic pathways, which are involved in inhi- active metabolites demonstrates an association with\nbition of pain sensations has been discussed. This the endocannabinoid system. It has been observed\ntheory has been confirmed by in vivostudies on ani- that in mouse brain and spinal cord, paracetamol is\nmals as well as on humans. Alloui et al. carried out subject to deacetylation to p-aminophenol that in\nthe study on analgesic and anti-inflammatory action turn reacts with arachidonic acid affected by fatty\nof paracetamol in rats which were given caragenin. acid amide hydrolase (FAAH), resulting in the for-\nNo anti-inflammatory",
+    "start_char": 19963,
+    "end_char": 20963,
+    "char_count": 999,
+    "vector_id": 25
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "26",
+    "text": "anti-inflammatory action turn reacts with arachidonic acid affected by fatty\nof paracetamol in rats which were given caragenin. acid amide hydrolase (FAAH), resulting in the for-\nNo anti-inflammatory effect of paracetamol was mation of an active metabolite of the drug, the fatty\nobserved, however, central antinociceptive effect of acid amide N-arachidonoylphenolamine (AM404)\nthis drug with the involvement of the 5-HT subtype (42, 43). AM404 does not act directly on cannabi-\n3\nof serotonin receptors was detected (38). The study noid receptors, however, it increases activity of\non healthy volunteers in whom the pain was induced endocannabinoid system in an indirect way (44). On\nthrough electrical stimulation of the median nerve one hand, this compound is a strong activator of the\nshowed that analgesic action of paracetamol was vanilloid receptor subtype 1 (TRPV1), being a lig-\ncompletely blocked in the group of subjects treated and of receptors for cannabinoids CB, and on the\n1\nwith par",
+    "start_char": 20763,
+    "end_char": 21763,
+    "char_count": 999,
+    "vector_id": 26
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "27",
+    "text": "t analgesic action of paracetamol was vanilloid receptor subtype 1 (TRPV1), being a lig-\ncompletely blocked in the group of subjects treated and of receptors for cannabinoids CB, and on the\n1\nwith paracetamol combined with tropisetron or other hand, it leads to an increase in the endogenous\ngranisetron (5-HT receptor antagonists) (39, 40). pool of these compounds as an inhibitor of the\n3\n\n16 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nendogenous cannabinoid (anandamide) reuptake centration of FAAH enzyme can be observed, e.g.,\n(45). Endogenous cannabinoids, e.g., anandamide, in the mesencephalic trigeminal nucleus, primary\nact antinociceptively both at the level of the spinal sensory neurons. In these areas of the brain an\ncord as well as the brain. The study on rats per- increased production of the active metabolite\nformed by Bertolini et al. presented that an earlier AM404 can be found, and this in turn may to a cer-\nadministration of the CB receptor inhibited AM404 tain degree explain",
+    "start_char": 21563,
+    "end_char": 22563,
+    "char_count": 1000,
+    "vector_id": 27
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "28",
+    "text": "n of the active metabolite\nformed by Bertolini et al. presented that an earlier AM404 can be found, and this in turn may to a cer-\nadministration of the CB receptor inhibited AM404 tain degree explain the inhibitory action of paraceta-\n1\nactivity and completely blocked analgesic action of mol towards cyclooxygenases in the CNS (46).\nparacetamol in the animals (46). Moreover, cannabi- Inhibition of nitrogen oxide (NO) formation\nnoids considerably lower body temperature through might be also an alternative mechanism of analgesic\nthe activation of CB receptors in the pre-optic area action of paracetamol. The L-arginine/NO pathway\n1\n(47). It has been known that analgesic derivatives of activated by substance P and NMDA receptors leads\naniline have a similar action as cannabinoids, such to NO synthesis, which is an important neurotrans-\nas mood improvement, psychic relaxation and seda- mitter in the nociceptive processes of the spinal cord\ntion. Such properties have not been observed so far",
+    "start_char": 22363,
+    "end_char": 23363,
+    "char_count": 1000,
+    "vector_id": 28
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "29",
+    "text": "ynthesis, which is an important neurotrans-\nas mood improvement, psychic relaxation and seda- mitter in the nociceptive processes of the spinal cord\ntion. Such properties have not been observed so far (49, 50).\nin the case of paracetamol, although some authors Summing up, paracetamol acts at all levels of\nascribe poor sedative properties to it (29, 48). pain stimulus conduction from the tissue receptors\nFurthermore, different concentrations of AM404 through the spinal cord to the thalamus and the cere-\nhave been found to inhibit COX-1 and COX-2 bral cortex in which pain sensations are evoked. The\nenzymes. This mechanism may be important espe- mechanism of analgesic action of paracetamol is\ncially in such areas of the brain in which a high con- complex. The following possibilities are still taken\nTable 1. Advantages and disadvantages of paracetamol therapy.\nAdvantages\n(when the drug is administered in the recommended therapeutic doses max. 4 g/24 h)\nwide therapeutic application\nchecked",
+    "start_char": 23163,
+    "end_char": 24163,
+    "char_count": 999,
+    "vector_id": 29
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "30",
+    "text": "taken\nTable 1. Advantages and disadvantages of paracetamol therapy.\nAdvantages\n(when the drug is administered in the recommended therapeutic doses max. 4 g/24 h)\nwide therapeutic application\nchecked and examined\nwell tolerated\ngood bioavailability after oral administration (t 2h)\n1/2\nfast elimination\ncheep\na small number of interactions with other drugs\nlow toxicity at low doses (\u22642 g / d) to the digestive tract and kidneys\nlow toxicity in children\nrare side effects (main allergic skin reactions)\navailable in different pharmaceutical forms\nDisadvantages\nmetabolized to a toxic metabolite (N-acetyl-p-benzoquinone imine)\ntherapeutic index (often not efficient at a low dose)\nlong-term application may cause:\n\u25cf renal functioning disorder\n\u25cf higher blood pressure\n\u25cf increased prevalence of heart infarction\nlow therapeutic efficiency\n\u25cf analgesic action at a dose of 1 g administered 2, 3, and 4 times a day\n\u25cf low anti-inflammatory action\nhepatotoxicity\n\u25cf increased aminotransferase activity at the",
+    "start_char": 23963,
+    "end_char": 24963,
+    "char_count": 999,
+    "vector_id": 30
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "31",
+    "text": "nfarction\nlow therapeutic efficiency\n\u25cf analgesic action at a dose of 1 g administered 2, 3, and 4 times a day\n\u25cf low anti-inflammatory action\nhepatotoxicity\n\u25cf increased aminotransferase activity at therapeutic doses\n\u25cf hepatic failure in the case of overuse (two-fold overuse of a therapeutic dose)\n\u25cf enhanced previous liver damage caused by alcohol consumption\n\u25cf combinations with traditional NSAIDs can result in a higher prevalence of digestive tract ulceration\n\nParacetamol: mechanism of action, applications and safety concern 17\ninto consideration: affecting both peripheral (inhibi- positories) differs from other analgesic medica-\ntion of COX activity) and central (COX, descending ments: e.g., sodium diclophenac in the form of sup-\nserotoninergic pathways, L-arginine/NO pathway, positories in the preparations Dicloberl (50 mg of\ncannabinoid system) antinociceptive processes as the active substance) or Dicloratio (25, 50 and 100\nwell as the redox mechanism (51). The studies on mg) achieve",
+    "start_char": 24763,
+    "end_char": 25763,
+    "char_count": 1000,
+    "vector_id": 31
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "32",
+    "text": "n the preparations Dicloberl (50 mg of\ncannabinoid system) antinociceptive processes as the active substance) or Dicloratio (25, 50 and 100\nwell as the redox mechanism (51). The studies on mg) achieves the maximal blood concentration after\nthe mechanism of paracetamol action require further 30 min since the application, in the preparations:\nverification - they should concern not only the ther- Diclac and Diclofenac GSK (50 or 100 mg) or\napeutic action of this drug but also more frequently Voltaren (25, 50, 100 mg) \u00f1 after 60 min, and in\nreported poisoning, especially strong hepatotoxicity Olfen (50 and 100 mg) \u00f1 after 2 h (data according to\nresulting from the drug overdose since numerous Pharmindex 2012). These data show that the speed\npreparations containing paracetamol are available of absorption of an active substance from the drug\nwithout a prescription. administered per rectum(affecting the occurrence of\nthe therapeutic effect) is influenced by the form and\nParacetamol on the phar",
+    "start_char": 25563,
+    "end_char": 26563,
+    "char_count": 1000,
+    "vector_id": 32
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "33",
+    "text": "bsorption of an active substance from the drug\nwithout a prescription. administered per rectum(affecting the occurrence of\nthe therapeutic effect) is influenced by the form and\nParacetamol on the pharmaceutical market composition of the adjuvant substances contained in\nParacetamol is available on the market under suppositories; the same factors affect the supposito-\ndifferent trade names in simple (sold over the count- ries containing paracetamol. Slower absorption of\ner) or more complex preparations combined with an the drug is usually associated with its longer pres-\nadditional active substance obtainable only by pre- ence in the organism, i.e., with a longer time of\nscription (with tramadol) or without it (in combina- action, which in the case pain complaints is of con-\ntion with codeine phosphate, ascorbic acid or siderable importance.\ndiphenhydramine hydrochloride as well as NSAIDs Paracetamol can be also used intravenously\nsuch as ibuprofen or propyphenazone. Paracetamol (i.v.) a",
+    "start_char": 26363,
+    "end_char": 27363,
+    "char_count": 1000,
+    "vector_id": 33
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "34",
+    "text": "e phosphate, ascorbic acid or siderable importance.\ndiphenhydramine hydrochloride as well as NSAIDs Paracetamol can be also used intravenously\nsuch as ibuprofen or propyphenazone. Paracetamol (i.v.) and therefore is widely used in the hospital\noccurs in the form of tablets, effervescent tablets, health service, e.g., in the postoperative pain thera-\nsuspension, powder to prepare oral liquid medicine py (it has been evidenced that administration of\n(sachets) and rectal suppositories. When adminis- paracetamol especially during the first hour of treat-\ntered orally, clinical effect of paracetamol appears ment is more efficient in reducing pain intensity\nafter 30 min. Paracetamol content in oral medica- than given orally), in order to quickly decrease high\nments differs; most frequently it equals 500 mg, fever or in the case when another route of adminis-\nhowever, there are preparations (most often com- tration is not possible (52, 53). At the beginning,\nplex) which contain 325 mg of para",
+    "start_char": 27163,
+    "end_char": 28163,
+    "char_count": 1000,
+    "vector_id": 34
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "35",
+    "text": "uals 500 mg, fever or in the case when another route of adminis-\nhowever, there are preparations (most often com- tration is not possible (52, 53). At the beginning,\nplex) which contain 325 mg of paracetamol or 750 propacetamol \u00f1 precursor of paracetamol (Pro-\nmg (e.g., Febrisan, Coldrex) or even 1000 mg (e.g., Dafalgan\u00c6, Bristol-Myers Squibb; Pro-Efferalgan,\nEfferalgan Forte, Codrex MaxGrip, Flucontrol Hot). UPSA) was used which after the i.v.administration\nThe fastest action of paracetamol, already after 15 underwent hydrolysis to paracetamol and diethyl-\nmin, occurs in the case of using fast-release tablets, glycine under the influence of plasma esterases. In\nenriched with sodium bicarbonate which enhances 2005, an intravenous form of new generation para-\nstomach emptying. Due to this process, paracetamol cetamol was registered as a solution ready to be\nquicker passes to the small intestine where it under- infused at the concentration of 500 mg/50 mL or 1\ngoes absorption (e.g., Pana",
+    "start_char": 27963,
+    "end_char": 28963,
+    "char_count": 1000,
+    "vector_id": 35
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "36",
+    "text": "rocess, paracetamol cetamol was registered as a solution ready to be\nquicker passes to the small intestine where it under- infused at the concentration of 500 mg/50 mL or 1\ngoes absorption (e.g., Panadol Rapid\u00c6). When g/100 mL (Perfalgan\u00c6, Bristol-Myers Squibb) which\nadministered rectally (suppositories), bioavailability completely removed proparacetamol from medical\nof paracetamol is lower, about two thirds of avail- practice (53, 54).\nability as compared to oral administration. The time\nnecessary to achieve the therapeutic concentration Side effects\nfor suppositories is 120-180 min, which means that When appropriate dosage of medicaments con-\nanalgesic action occurs after 2-3 h since the drug taining paracetamol is used, i.e., maximum dose of\nintake. Bioavailability and speed of absorption of 4 g/24 h, (as one can read in the leaflet) no serious\nparacetamol in the form of suppositories depend on side effects have been observed, besides possible\nnumerous factors: the drug dose (in adu",
+    "start_char": 28763,
+    "end_char": 29763,
+    "char_count": 1000,
+    "vector_id": 36
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "37",
+    "text": "on of 4 g/24 h, (as one can read in the leaflet) no serious\nparacetamol in the form of suppositories depend on side effects have been observed, besides possible\nnumerous factors: the drug dose (in adults usually allergic skin reactions, although after higher doses\n650 mg; in children 80-325 mg), the size of the sup- or prolonged duration of taking the drug, some side\npository (the smaller and the lower dose the better effects may occur, especially in the liver (Table 1)\nbioavailability is), the type of vehicle (the higher (55). Interesting is that at the beginning of 2013, the\nvehicle lipophilicity, the greater bioavailability and United States Food and Drug Administration (US\nthe faster effect but the shorter time of drug action) FDA) introduced paracetamol on the list of the\nand the degree of rectal vascularization. Slower preparations, which will undergo specific monitor-\nabsorption of paracetamol applied via rectum (sup- ing on the basis of information from the system on\n\n18 MARTA",
+    "start_char": 29563,
+    "end_char": 30563,
+    "char_count": 999,
+    "vector_id": 37
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "38",
+    "text": "ee of rectal vascularization. Slower preparations, which will undergo specific monitor-\nabsorption of paracetamol applied via rectum (sup- ing on the basis of information from the system on\n\n18 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nadverse reactions (FEARS, the FDA Adverse Event (HIV)), alcohol overuse or application of paraceta-\nReporting System) collected during the period from mol combined with drugs inducing cytochrome\nOctober to December 2012. The preparations con- P450 (rifampicin, barbiturates, carbamazepine) can\ntaining paracetamol will be evaluated in terms of lead to hepatic impairment much easier, even when\ninducing adverse skin reactions. the compound is used in therapeutic doses.\nAfter ingestion of paracetamol, about 90% of Development of acute hepatic failure as a result of\nthe compound undergoes metabolism in the liver in paracetamol overuse (i.e., 7.5-15 g /24 h) as well as\nconjugation with glucuronic acid (50-60%), sulfuric the methods of its treatment have been pr",
+    "start_char": 30363,
+    "end_char": 31363,
+    "char_count": 1000,
+    "vector_id": 38
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "39",
+    "text": "of\nthe compound undergoes metabolism in the liver in paracetamol overuse (i.e., 7.5-15 g /24 h) as well as\nconjugation with glucuronic acid (50-60%), sulfuric the methods of its treatment have been precisely dis-\nacid (25-35%) and cystine (approximately 3%) to cussed in many studies for the last ten years (46, 58-\nform pharmacologically inactive metabolites, which 60). The authors of the present study concentrate on\nare eliminated with urine. A small amount of the other (likely to be potential) adverse reactions of\ndrug (about 5%) is eliminated in an unchanged form paracetamol, which result from its mechanism of\nby kidneys. Subsequent 5% of paracetamol is sub- action.\njected to N-hydroxylation in the liver with the Results of recent reports on paracetamol as a\ninvolvement of cytochrome P450 enzymes (particu- peripheral selective COX-2 inhibitor encourage\nlarly CYP2E1) to form a toxic metabolite N-acetyl- researchers to analyze this drug more critically. The\np-benzoquinone imine (NAPQI)",
+    "start_char": 31163,
+    "end_char": 32163,
+    "char_count": 1000,
+    "vector_id": 39
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "40",
+    "text": "0 enzymes (particu- peripheral selective COX-2 inhibitor encourage\nlarly CYP2E1) to form a toxic metabolite N-acetyl- researchers to analyze this drug more critically. The\np-benzoquinone imine (NAPQI), which is very question arises as to whether paracetamol revealing\nquickly inactivated by glutathione sulfhydryl groups a similar pharmacological profile to coxibs may\nand excreted with urine as mercapturic acid (46). induce the same side effects, especially when the\nSevere liver impairment after paracetamol drug is used for a long time.2 A permanent blockade\noverdose was documented for the first time in Great of prostaglandin synthesis through selective COX-2\nBritain in 1966 (56). Since then, a steady increase in inhibitors is currently regarded as a cause of adverse\nthe number of accidental or intended poisonings has cardiovascular reactions in patients after a pro-\nbeen noted all over the world including Poland. The longed use of these drugs (15, 36, 37, 61). Long-\nmain cause of this s",
+    "start_char": 31963,
+    "end_char": 32963,
+    "char_count": 1000,
+    "vector_id": 40
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "41",
+    "text": "or intended poisonings has cardiovascular reactions in patients after a pro-\nbeen noted all over the world including Poland. The longed use of these drugs (15, 36, 37, 61). Long-\nmain cause of this situation is a huge amount of lasting COX-2 inhibition decreases the production\npreparations containing paracetamol, which are of vasoprotective prostacyclin (PGI) by vascular\n2\navailable on the pharmaceutical market without any endothelial cells, which inhibits platelet aggregation\nprescription (according to the 20th edition of Dugs and has vasodilational capacity. This impairs the\nof Contemporary Therapy, the number of such balance between tromboxane and prostacyclin and\npreparations reaches 92 items, including 39 single causes thrombus formation. Contrary to the inflam-\nand 53 complex products). Depletion of hepatic glu- matory tissue, the endothelial cells possess a low\ntathione stores occurs as a result of the intensive level of peroxides, so they are not likely to inhibit\nmetabolism f",
+    "start_char": 32763,
+    "end_char": 33763,
+    "char_count": 999,
+    "vector_id": 41
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "42",
+    "text": "ts). Depletion of hepatic glu- matory tissue, the endothelial cells possess a low\ntathione stores occurs as a result of the intensive level of peroxides, so they are not likely to inhibit\nmetabolism following intentional and unintentional paracetamol activity against COX-2 (14).\noverdose of paracetamol (ingestion of more than 4 It has been shown that oral administration of\ng/24 h, i.e., over 8 tablets, 500 mg each!). In such a paracetamol at the dose of 500 mg decreases the\nsituation, paracetamol becomes a dangerous and amount of excreted with urine 2,3-dinor-6-keto\nlife-threatening drug because a highly reactive PGF , the main stable inactive metabolite of prosta-\n1\u03b1\nNAPQI metabolite covalently binds to hepatocyte cyclin, whose synthesis is mediated by endothelial\nmacromolecules leading to impoverishment of COX-2 (62). Likewise, 50% reduction in this\nenzymatic systems and structural and metabolic metabolite excretion in the urine of pregnant women\ndamage to the liver (potential lethal",
+    "start_char": 33563,
+    "end_char": 34563,
+    "char_count": 1000,
+    "vector_id": 42
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "43",
+    "text": "o impoverishment of COX-2 (62). Likewise, 50% reduction in this\nenzymatic systems and structural and metabolic metabolite excretion in the urine of pregnant women\ndamage to the liver (potential lethal hepatic necro- was noted after ingestion of 1 g of paracetamol (63).\nsis). In the later stage of poisoning, renal tubular Taking into consideration aforementioned results\nnecrosis and hypoglycemic coma may appear (57). obtained by Hinz et al. (36), regarding over 80%\nIt is worth mentioning that the weakened hepatic inhibition of COX-2 in the vascular endothelium\nfunction (caused by slimming, malnutrition, hepati- caused by paracetamol, it can be speculated that\ntis C virus (HCV), human immunodeficiency virus such a mechanism of action would be responsible\n2 Coxibs, NSAIDs selectively inhibiting COX-2 activity, do not affect (in therapeutic doses) COX-1 at the same time. Due to such a mech-\nanism of coxibs, their side effect on the digestive system, which happens in the case of traditional",
+    "start_char": 34363,
+    "end_char": 35363,
+    "char_count": 1000,
+    "vector_id": 43
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "44",
+    "text": "ng COX-2 activity, do not affect (in therapeutic doses) COX-1 at the same time. Due to such a mech-\nanism of coxibs, their side effect on the digestive system, which happens in the case of traditional NSAIDs, was eliminated. However, later\nclinical observations indicated that patients using coxibs for a long time developed adverse cardiovascular reactions. Thus, because of a\nhigher risk of such perturbations in those patients, coxibs (etoricoxib, lumiracoxib, rofecoxib and valdecoxib) have been withdrawn from\nsale. Rofecoxib known under the trade name of Vioxx (Merck & Co.) was withdrawn as the first one in 2004 after the 5-year existence on\nthe pharmaceutical market; valdecoxib (Bextra, Pfizer) was the next drug withdrawn in 2005. At present, only one drug of this type, cele-\ncoxib (Celebrex; Pfizer Europe), is used in Poland.\n\nParacetamol: mechanism of action, applications and safety concern 19\nfor adverse cardiovascular reactions in patients who (unlike acidic NSAIDs gathering in th",
+    "start_char": 35163,
+    "end_char": 36163,
+    "char_count": 1000,
+    "vector_id": 44
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "45",
+    "text": "rex; Pfizer Europe), is used in Poland.\n\nParacetamol: mechanism of action, applications and safety concern 19\nfor adverse cardiovascular reactions in patients who (unlike acidic NSAIDs gathering in the gastric\ntake this drug regularly. It should be emphasized epithelial cells) and on the other hand, due to a\nthat paracetamol due to its short half-life (approxi- weak impact on COX-1. However, the results of\nmately 2 h) induces a short-lasting inhibition of epidemiological studies suggest that paracetamol at\nCOX-2 activity. Thus, in order to eliminate pain it is daily doses higher than 2-2.6 g increases the risk of\nnecessary to administer repeated 1 g doses of parac- serious side effects in the upper segment of the\netamol for maintaining constant (80%) inhibition of digestive tract such as bleeding or perforations (69).\nCOX-2. This fact has to be considered by a doctor Therefore, it is postulated that a long-term effect of\nprior to making the decision about long-term treat- paracetamol o",
+    "start_char": 35963,
+    "end_char": 36963,
+    "char_count": 1000,
+    "vector_id": 45
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "46",
+    "text": "leeding or perforations (69).\nCOX-2. This fact has to be considered by a doctor Therefore, it is postulated that a long-term effect of\nprior to making the decision about long-term treat- paracetamol on the digestive tract should be exam-\nment with paracetamol in order to avoid the drug ined in randomized studies, especially in patients\noverdose. with osteoarthrisis who require high doses of this\nEpidemiological data reveal that long-lasting drug for a long time. Paracetamol like coxibs does\nadministration of paracetamol affects blood pres- not induce bronchial spasm in patients with aspirin\nsure. Nurses\u00ed Health Studies present two cohort asthma. In the strategy for treatment of pain in asth-\ninvestigations performed among younger and older matics, it is recommended to ingest this drug at\nwomen. One of them demonstrated that in patients doses lower than 1000 mg in order to avoid poten-\nwho regularly took paracetamol (over 500 mg/24 h), tial bronchial spasm (15).\na relative risk (RR) for",
+    "start_char": 36763,
+    "end_char": 37763,
+    "char_count": 1000,
+    "vector_id": 46
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "47",
+    "text": "omen. One of them demonstrated that in patients doses lower than 1000 mg in order to avoid poten-\nwho regularly took paracetamol (over 500 mg/24 h), tial bronchial spasm (15).\na relative risk (RR) for development of hypertension Bearing in mind a preferential action of parac-\nwas considerably higher as compared to women etamol on COX-2, the differences between the drug\nwho did not use this drug (RR 1.93 for older women; discussed and coxibs, selective inhibitors of this\nRR 1.99 for younger) (64). Moreover, it worth isoenzyme, should be emphasized. Paracetamol in\nemphasizing that the risk associated with paraceta- opposition to selective inhibitors of COX-2, despite\nmol was similar to traditional NSAIDs (RR 1.78 for a similar mechanism of action, reveals weak anti-\nolder women; RR 1.60 for younger). The second inflammatory activity. It is likely to result from the\ncohort investigation carried out in the same study extracellular accumulation of arachidonic acid and\ngroup indicated that i",
+    "start_char": 37563,
+    "end_char": 38563,
+    "char_count": 1000,
+    "vector_id": 47
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "48",
+    "text": "younger). The second inflammatory activity. It is likely to result from the\ncohort investigation carried out in the same study extracellular accumulation of arachidonic acid and\ngroup indicated that in women who frequently used peroxides in the inflammatory tissues, which reduce\nparacetamol (= 22 days a month), the risk of serious an inhibitory effect of paracetamol on the\ncardiovascular events (such as heart infarction or prostaglandin production (Fig. 3) (14, 35). Indeed,\ncerebral stroke) was nearly the same as after tradi- paracetamol did not decrease prostanoid concentra-\ntional NSAIDs (RR 1.35 for paracetamol; RR 1.44 tions in the joint fluid of patients suffering from\nfor traditional NSAIDs). Similarly, application of osteoarthrisis (70). On the other hand, paracetamol\nparacetamol in the amount of 15 tablets or more per reduced tissue swelling with similar to ibuprofen\nweek is associated with the risk of cardiovascular efficiency after the oral cavity surgery in humans\nevents com",
+    "start_char": 38363,
+    "end_char": 39363,
+    "char_count": 1000,
+    "vector_id": 48
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "49",
+    "text": "the amount of 15 tablets or more per reduced tissue swelling with similar to ibuprofen\nweek is associated with the risk of cardiovascular efficiency after the oral cavity surgery in humans\nevents comparable to traditional NSAIDs (RR 1.68 (71). There have been also some studies which\nfor paracetamol; 1.86 for traditional NSAIDs) (65). demonstrated anti-inflammatory action of paraceta-\nAccording to the guidelines of the American Heart mol, e.g., nociceptive inhibition and carrageenan-\nAssociation acetaminophen (paracetamol) is nowa- induced rat paw edema (72). Therefore, the notion\ndays a drug of choice in patients with concomitant that paracetamol exhibits weak anti-inflammatory\ncardiovascular disorders (66). The prospective dou- properties seems to be more legitimate than the\nble-blind trial was performed in patients with stable assumption that this drug is devoid of such an\ncoronary disease who used paracetamol at the dose action.\nof 1 g three times a day for two weeks and the drug A",
+    "start_char": 39163,
+    "end_char": 40163,
+    "char_count": 999,
+    "vector_id": 49
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "50",
+    "text": "ial was performed in patients with stable assumption that this drug is devoid of such an\ncoronary disease who used paracetamol at the dose action.\nof 1 g three times a day for two weeks and the drug As regards safety of paracetamol application in\nincreased their blood pressure. Its effect was similar pregnancy, prospective cohort studies in humans\nto that exerted by diclofenac and ibuprofen. have not shown an increase in the prevalence of\nParacetamol due to its selective action towards developmental fetal anomalies in pregnant women\nCOX-2 and similarly to coxibs but contrary to typ- who took paracetamol in therapeutic doses, although\nical NSAIDs does not possess antiaggregatory in some experimental studies on animals paraceta-\nproperties. The drug does not inhibit blood platelet mol administered at doses twice as high as the max-\naction when taken at a single oral dose of 1000 mg. imum single dose demonstrated embriotoxic action\nHowever, clinical studies indicate antiaggregatory (73).",
+    "start_char": 39963,
+    "end_char": 40963,
+    "char_count": 999,
+    "vector_id": 50
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "51",
+    "text": "stered at doses twice as high as the max-\naction when taken at a single oral dose of 1000 mg. imum single dose demonstrated embriotoxic action\nHowever, clinical studies indicate antiaggregatory (73). Considering the fact that paracetamol is the\naction of paracetamol in the case of parenteral drug of choice in pregnant women, it should be\nadministration in high doses (67, 68). Paracetamol emphasized that epidemiological studies report the\ncan be safely used in the digestive tract; on one possibility of the association between application of\nhand due to its non-acidic chemical structure this drug in pregnancy and development of asthma\n\n20 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nin early childhood. The metabolism of paracetamol the withdrawal of packages containing high amounts\nhas been suggested to be responsible for this effect of paracetamol from the market, e.g., containers\nbecause a large amount of glutathione is used to comprising even 100 single doses (e.g., Apap - 100\ndeactivate",
+    "start_char": 40763,
+    "end_char": 41763,
+    "char_count": 1000,
+    "vector_id": 51
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "52",
+    "text": "gested to be responsible for this effect of paracetamol from the market, e.g., containers\nbecause a large amount of glutathione is used to comprising even 100 single doses (e.g., Apap - 100\ndeactivate the toxic metabolite. Lungs of the devel- tablets, Codipar - 50 tablets), and the introduction of\noping fetus might deplete glutathione, the main blisters that should enable the patient to control the\nantioxidant of this organ, which can lead to oxida- amount of ingested drug. Furthermore, the packag-\ntive stress and inflammation of the respiratory air- ing should be labelled with the information about\nways. In some investigations, the occurrence of the risk of liver damage caused by the overuse of the\nwheezing breath in very small children was drug. It also seems justifiable to use only one inter-\nobserved, which however, is a very weak indicator national name, either paracetamol or acetamino-\nof asthma (74). Epidemiological studies from differ- phen, and not two different names of the s",
+    "start_char": 41563,
+    "end_char": 42563,
+    "char_count": 1000,
+    "vector_id": 52
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "53",
+    "text": "inter-\nobserved, which however, is a very weak indicator national name, either paracetamol or acetamino-\nof asthma (74). Epidemiological studies from differ- phen, and not two different names of the same drug\nent research centres provide controversial results on because it can be misleading for the patient (if not\nthe association between paracetamol ingestion by properly informed the unaware patient can ingest the\npregnant women and the development of bronchial same active substance under different names). The\nasthma later in childhood (74, 75). This happens most drastic proposal suggested by FDA is the with-\nbecause a number of other factors such as fever, drawal of all complex drugs, both available over the\ncold, inflammation of fetal membranes or other counter (OTC) and by prescription, because, as the\ninfections of pregnant women can induce develop- various study results indicate, they are responsible,\nment of asthma in small children, leading thus to fal- to a great degree, for ac",
+    "start_char": 42363,
+    "end_char": 43363,
+    "char_count": 1000,
+    "vector_id": 53
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "54",
+    "text": "because, as the\ninfections of pregnant women can induce develop- various study results indicate, they are responsible,\nment of asthma in small children, leading thus to fal- to a great degree, for acute paracetamol poisoning.\nsification of study results. Thus, a randomized study The data obtained by the Toxic Exposure\nwith placebo as a control could solve this problem. Surveillance System (TESS) in 2005 showed that\nHowever, such a study would be unethical from the among all acute paracetamol poisonings, 6.3% (i.e.,\npoint of view of good clinical practice (GCP) which 3,845 of the 61,289 reported) was caused by OTC\nrequires application of a standard drug as a com- preparations and 1.5% (41 of the 2,698 reported)\nparator, and as NSAIDs are contraindicated in preg- involved severe hepatic damage, while 54% of over-\nnancy, one group of women with pain and fever doses (i.e., 1,470 of the 2,698 reported) were record-\nwould not be treated at all. At present, there is no ed in the case of usin",
+    "start_char": 43163,
+    "end_char": 44163,
+    "char_count": 999,
+    "vector_id": 54
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "55",
+    "text": "age, while 54% of over-\nnancy, one group of women with pain and fever doses (i.e., 1,470 of the 2,698 reported) were record-\nwould not be treated at all. At present, there is no ed in the case of using complex drugs available by\nconvincing evidence allowing to unequivocally prescription. As regards the latter drugs, it has not\ndetermine that application of paracetamol in preg- been completely elucidated to which extent a nar-\nnant women may lead to asthma development in cotic ingredient present in the preparation con-\nsmall children. Therefore, paracetamol still remains tributed to the poisoning (76). At present, in all com-\nan analgesic and antipyretic drug of choice in preg- plex preparations available by prescription in the\nnant patients. However, it should be stressed that USA, a single dose of contained paracetamol cannot\nthe aforementioned data do not concern complex exceed 325 mg, whereas the way of the drug dosage,\npreparations containing paracetamol or those for i.v. despite a",
+    "start_char": 43963,
+    "end_char": 44963,
+    "char_count": 1000,
+    "vector_id": 55
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "56",
+    "text": "e dose of contained paracetamol cannot\nthe aforementioned data do not concern complex exceed 325 mg, whereas the way of the drug dosage,\npreparations containing paracetamol or those for i.v. despite a decrease in a single dose, remains the\ninfusion (safety for this route of administration has same. Although paracetamol is not so toxic for chil-\nnot been determined due to lack of sufficient clini- dren as for adults (children do not have a well-\ncal data). developed cytochrome P450 system so the toxic\nmetabolite is not formed), FDA also recommends\nPrecautions and attempts to counteract toxicity that liquid paracetamol should be available only in a\nof paracetamol single established dose, e.g., 160 mg/5 mL (accord-\nDue to an easy overdose of paracetamol, the ing to FDA information; www.fda.gov).\nUS FDA has proposed to implement new solutions, Another solution aimed at prevention of parac-\nwhich to a certain degree would limit this growing etamol hepatotoxicity in Great Britain was the int",
+    "start_char": 44763,
+    "end_char": 45763,
+    "char_count": 1000,
+    "vector_id": 56
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "57",
+    "text": "v).\nUS FDA has proposed to implement new solutions, Another solution aimed at prevention of parac-\nwhich to a certain degree would limit this growing etamol hepatotoxicity in Great Britain was the intro-\nproblem. A decrease in the maximum permissible duction of tablets containing paracetamol and\nsingle dose of paracetamol from 1000 mg to 650 mg methionine, which after the conversion into cysteine\nseems to be one of the crucial problems. Thus, a and then glutathione in hepatocytes would inactivate\nquestion arises what will happen to numerous OTC the active metabolite, NAPQI. Moreover, due to\npreparations containing paracetamol in the dose such a combination, there is no time wasted from the\nexceeding 650 mg. It has been suggested that high- moment of intentional or unintentional ingestion of\ner doses of this drug, i.e., above 325 mg should be a toxic dose of paracetamotol to the application of\navailable only by prescription (according to the antidote, e.g., N-acetylcysteine (hepatic dam",
+    "start_char": 45563,
+    "end_char": 46563,
+    "char_count": 1000,
+    "vector_id": 57
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "58",
+    "text": "f\ner doses of this drug, i.e., above 325 mg should be a toxic dose of paracetamotol to the application of\navailable only by prescription (according to the antidote, e.g., N-acetylcysteine (hepatic damage\ninformation of the US FDA; www.fda.gov). occurs 24 h after the overdose). Nowadays, the only\nAnother suggested solution postulated by FDA is such preparation registered in Great Britain is\n\nParacetamol: mechanism of action, applications and safety concern 21\nParadote (Penn Pharmaceuticals) containing 500 mg used sporadically. It should be remembered that a\nof paracetamol and 100 mg of methionine. Other single dose of paracetamol should not exceed 1 g\npreparations of this type, e.g., Pameton (SmithKline and daily dose 4 g; the US FDA suggests these val-\nBeecham), have been withdrawn. In other European ues should be decreased to 0.65 g and 3.25 g, respec-\ncountries and the USA such combinations of parac- tively. In the case of combined application of para-\netamol do not exist on the phar",
+    "start_char": 46363,
+    "end_char": 47363,
+    "char_count": 1000,
+    "vector_id": 58
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "59",
+    "text": "er European ues should be decreased to 0.65 g and 3.25 g, respec-\ncountries and the USA such combinations of parac- tively. In the case of combined application of para-\netamol do not exist on the pharmaceutical market cetamol with NSAIDs, paracetamol dosage should\nbecause so far no efficient and safe dosage of be considerably lower than the aforementioned\nmethionine has been established for patients; also values.\nsafety of the long-term application of these prepara-\ntions has not been investigated yet (some carcino- CONCLUSIONS\ngenic effect of methionine has been suggested).\nBesides, the price of such a drug is higher than for a Summing up, paracetamol monotherapy is effi-\npreparation containing paracetamol alone (77). cient, well tolerated by the majority of patients and\nIn the light of novel studies, the application of safe, on condition that the drug is administered at\ntraditional NSAIDs in combination with paraceta- therapeutic doses. Table 1 sums up the advantages\nmol has not been",
+    "start_char": 47163,
+    "end_char": 48163,
+    "char_count": 1000,
+    "vector_id": 59
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "60",
+    "text": "ovel studies, the application of safe, on condition that the drug is administered at\ntraditional NSAIDs in combination with paraceta- therapeutic doses. Table 1 sums up the advantages\nmol has not been recommended, particularly when and disadvantages of paracetamol. We should, how-\nactive substances occur in higher doses (8, 69). ever, bear in mind that the paracetamol overuse or\nRahme et al. (69) published the retrospective cohort application even at therapeutic doses in some situa-\nstudy performed in 644,183 patients aged over 65 tions like improper slimming, smoking, alcohol\nyears who had been receiving paracetamol (at daily abuse or ingestion of other medicines may cause\ndoses: < 3 g and > 3 g) and/or traditional NSAIDs severe hepatic damage or death. Therefore, the ques-\n(with or without a proton pump inhibitor) for 6 tion arises as to whether the patient knows that a\nyears. The risk of hospitalization due to gastroin- safe dose of paracetamol (assuming that the above-\ntestinal eve",
+    "start_char": 47963,
+    "end_char": 48963,
+    "char_count": 1000,
+    "vector_id": 60
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "61",
+    "text": "ut a proton pump inhibitor) for 6 tion arises as to whether the patient knows that a\nyears. The risk of hospitalization due to gastroin- safe dose of paracetamol (assuming that the above-\ntestinal events (ulceration, perforation, bleeding mentioned situations are not present) comprises only\nfrom the upper or lower segment of the digestive eight tablets of 500 mg or four sachets, each one\ntract) appeared to be two-fold higher in the case of containing 1000 mg, per day and that paracetamol is\ntaking paracetamol in combination with traditional \u00eb\u00edhidden\u00ed\u00ed in other preparations under different\nNSAIDs as compared to NSAIDs used in monother- names (here are about 100 simple and complex\napy. The authors of that study (69), as well as other preparations in Poland). Thus, it is very important to\nresearchers analyzing the problem of interaction the patient to be warned by doctors or pharmacists\nbetween paracetamol and NSAIDs (8), explain the about the risk connected with the ingestion and par-\nre",
+    "start_char": 48763,
+    "end_char": 49763,
+    "char_count": 1000,
+    "vector_id": 61
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "62",
+    "text": "earchers analyzing the problem of interaction the patient to be warned by doctors or pharmacists\nbetween paracetamol and NSAIDs (8), explain the about the risk connected with the ingestion and par-\nresults in relation to the additional COX-1 inhibition ticularly with the overuse of this drug. It appears in\ncaused by paracetamol. This hypothesis seems to be the light of new data that despite frequent applica-\nreliable in the light of new data showing that para- tion of paracetamol as an efficient analgesic and\ncetamol synergistically enhances inhibitory effect of antipyretic drug, the action of this medicament has\ndiclofenac on platelet activity (68, 78). Thus, safety not been completely understood and this little\nand usefulness of complex preparations containing unknown part may cause irreversible damage to the\nparacetamol combined with NSAIDs appearing on organism when the drug is overused. A long-term\nthe pharmaceutic market are still the matter of dis- application of high doses of p",
+    "start_char": 49563,
+    "end_char": 50563,
+    "char_count": 1000,
+    "vector_id": 62
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "63",
+    "text": "versible damage to the\nparacetamol combined with NSAIDs appearing on organism when the drug is overused. A long-term\nthe pharmaceutic market are still the matter of dis- application of high doses of paracetamol carries the\ncussion. It is worth paying attention to preparations risk of adverse reactions typical for COX-2\ncontaining paracetamol and NSAIDs (ibuprofen and inhibitors (coxibs) such as hypertension, heart\npropyphenazone) available on the Polish market infarction or renal failure. It results from a peripher-\nwithout a prescription (Cefalgin and Saridon - al selective inhibition of COX-2 by paracetamol.\nparacetamol + propyphenazone and Metafen and Moreover, it appears that the use of paracetamol\nNurofen ultima - paracetamol + ibuprofen). The combined with NSAIDs is not beneficial because an\naforementioned drugs contain paracetamol at doses increase in the occurrence of gastrointestinal events\nof 250-500 mg and NSAIDs: ibuprofen - 200 mg or can be observed. On the other hand, i.v",
+    "start_char": 50363,
+    "end_char": 51363,
+    "char_count": 1000,
+    "vector_id": 63
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "64",
+    "text": "cause an\naforementioned drugs contain paracetamol at doses increase in the occurrence of gastrointestinal events\nof 250-500 mg and NSAIDs: ibuprofen - 200 mg or can be observed. On the other hand, i.v. adminis-\npropyphenazone - 150 mg. According to the manu- tered paracetamol at high doses inhibits platelet\nfacturers information, a single dose of these drugs is aggregation, which is very important in the treat-\n1-2 tablets with the possibility of three-fold applica- ment of patients with disorders of hemostasis.\ntion per day. Considering the maximum dosage (2 It should be remembered that despite the fact\ntablets 3 times a day), a total dose of paracetamol that paracetamol has a wide clinical application it is\nwould range from 1.5 g to 3 g, which is in compli- not a drug devoid of side effects. Therefore, before\nance with the contemporary knowledge (8, 69) if taking a decision about the treatment of the patient\n\n22 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nwith paracetamol, each time a",
+    "start_char": 51163,
+    "end_char": 52163,
+    "char_count": 999,
+    "vector_id": 64
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "65",
+    "text": "cts. Therefore, before\nance with the contemporary knowledge (8, 69) if taking a decision about the treatment of the patient\n\n22 MARTA J\u201d\u00e8WIAK-B BENISTA andJERZY Z. NOWAK\nwith paracetamol, each time a balance of benefits 20. Swierkosz T.A., Jordan L., McBride M. et al.:\nand losses should be made so as to perform the ade- Med. Sci. Monit. 8, 496 (2002).\nquate and efficient therapy. The aim of the present 21. Warner T.D., Vojnovic I., Giuliano F. et al.: J.\nstudy was not to deny the rationality of paracetamol Pharmacol. Exp. Ther. 310, 642 (2004).\nuse but only to draw the attention of doctors pre- 22. Vane J.R.: Nat. New Biol. 231, 232 (1971).\nscribing this drug and pharmacists selling the drug as 23. Ferreira S.H., Moncada S., Vane J.R.: Nat. New\nwell patients taking it to the fact that this drug should Biol. 231, 237 (1971).\nbe used only in situations which are indispensable. In 24. Smith J.B., Willis A.L.: Nat. New Biol. 231,\nthe light of the contemporary research it is not possi- 235",
+    "start_char": 51963,
+    "end_char": 52963,
+    "char_count": 999,
+    "vector_id": 65
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "66",
+    "text": "drug should Biol. 231, 237 (1971).\nbe used only in situations which are indispensable. In 24. Smith J.B., Willis A.L.: Nat. New Biol. 231,\nthe light of the contemporary research it is not possi- 235 (1971).\nble to answer the question included in the title of the 25. Fu J.Y., Masferrer J.L., Seibert K. et al.: J. Biol.\npresent study \u00ecDo we know all about paracetamol\u00ee Chem. 265, 16737 (1990).\nbut the nearest years will obviously provide the 26. Xie W.L., Chipman J.G., Robertson D.L. et al.:\nanswer whether the decision taken in 1956 to intro- Proc. Natl. Acad. Sci. USA 88, 2692 (1991).\nduce paracetamol as an OCT drug was correct. 27. Chandrasekharan N.V., Dai H., Roos K.L. et\nal.: Proc. Natl. Acad. Sci. USA 99, 13926\nAcknowledgment (2002).\n28. Dinchuk J.E., Liu R.Q., Trzaskos J.M.:\nThe study was financed by the Medical Immunol. Lett. 86, 121 (2003).\nUniversity of \u00a3\u00dbd\u00fc (grant no.: 503/1-23-01/503-01). 29. Kis B., Snipes J.A., Busija D.W.: J. Pharmacol.\nExp. Ther. 315, 1 (2005).\nREFERENCES",
+    "start_char": 52763,
+    "end_char": 53763,
+    "char_count": 999,
+    "vector_id": 66
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "67",
+    "text": "was financed by the Medical Immunol. Lett. 86, 121 (2003).\nUniversity of \u00a3\u00dbd\u00fc (grant no.: 503/1-23-01/503-01). 29. Kis B., Snipes J.A., Busija D.W.: J. Pharmacol.\nExp. Ther. 315, 1 (2005).\nREFERENCES 30. Simmons D.L., Chandrasekharan N.V., Hu D.\net al.: J. Pharmacol. Exp. Ther. 315,1412\n1. Chan A., Hepp P.: Centralbl. Klein. Med. 7, 561 (2005).\n(1886). 31. Ayoub S.S., Colville-Nash P.R., Willoughby\n2. Morse H.N.: Ber. Deutscher Chem. Ges. 11, D.A. et al.: Eur. J. Pharmacol. 538, 57 (2006).\n232 (1878). 32. Botting R.M.: J. Physiol. Pharmacol. 57, 113\n3. Von Mering J.: Ther. Monatsch. 7: 577 (1893). (2006).\n4. Brodie B.B., Axelrod J.: J. Pharmacol. Exp. 33. Botting R.M.: Pharmacol. Rep. 62, 518 (2010).\nTher. 94, 29 (1948). 34. Schwab J.M., Beiter T., Linder J.U. et al.:\n5. Leung L.: J. Prim. Health Care 4, 254 (2012). FASEB J. 17, 2174 (2003).\n6. Ji P., Wang Y., Li Z., Doddapaneni S. et al.: J. 35. Graham G.G., Scott K.F.: Am. J. Ther. 12, 46\nPharm. Sci. 101, 4383 (2012). (2005).\n7. How",
+    "start_char": 53563,
+    "end_char": 54563,
+    "char_count": 999,
+    "vector_id": 67
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "68",
+    "text": ". Health Care 4, 254 (2012). FASEB J. 17, 2174 (2003).\n6. Ji P., Wang Y., Li Z., Doddapaneni S. et al.: J. 35. Graham G.G., Scott K.F.: Am. J. Ther. 12, 46\nPharm. Sci. 101, 4383 (2012). (2005).\n7. Howard S.S.: Pain Physician 12, 269 (2009). 36. Hinz B., Cheremina O., Brune K.: FASEB J. 22,\n8. Hinz B., Brune K.: J. Pharmacol. Exp. Ther. 383 (2008).\n300, 367 (2002). 37. Hinz B., Dormann H., Brune K.: Arthritis\n9. Nowak J.Z., Dzielska-Olczak M.: Pulse of Rheum. 54, 282 (2006).\nMedicine (Polish), educational issue, (2012). 38. Alloui A., Chassaing C., Schmidt J. et al.: Eur.\n10. Nowak J.Z.: Mil. Pharm. Med. 5, 33 (2012a). J. Pharmacol. 443, 71 (2002).\n11. Nowak J.Z.: Mag. Lek. Okul. 6, 57 (2012b). 39. Pickering G., Est\u00cbve V., Loriot M.A. et al.:\n12. Anderson B.J.: Pediatric Anesthesia 18, 915 Clin. Pharmacol. Ther. 84, 47 (2008).\n(2008). 40. Pickering G., Loriot M.A., Libert F. et al.: Clin.\n13. Aronoff D.M., Oates J.A., Boutaud O.: Clin. Pharmacol Ther. 79, 371 (2006).\nPharmacol. Ther.79,",
+    "start_char": 54363,
+    "end_char": 55363,
+    "char_count": 1000,
+    "vector_id": 68
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "69",
+    "text": "Clin. Pharmacol. Ther. 84, 47 (2008).\n(2008). 40. Pickering G., Loriot M.A., Libert F. et al.: Clin.\n13. Aronoff D.M., Oates J.A., Boutaud O.: Clin. Pharmacol Ther. 79, 371 (2006).\nPharmacol. Ther.79, 9 (2006). 41. Nakamura K., Li Y.Q., Kaneko T. et al.:\n14. Boutaud O., Aronoff D.M., Richardson J.H. et Neuroscience 103, 763 (2001).\nal.: Proc. Natl. Acad. Sci. USA 99, 7130 (2002). 42. H\u02c6gest\u2030tt E.D., J\u02c6nsson B.A.G., Ermund A.: J.\n15. Hinz B., Brune K.: Ann. Rheum. Dis. 71, 20, Biol. Chem. 280, 31405 (2005).\n(2012). 43. Ottani A., Leone S., Sandrini M. et al.: Eur. J.\n16. Ouellet M., Percival M.D.: Arch. Biochem. Pharmacol. 531, 280 (2006).\nBiophys. 387, 273 (2001). 44. Kelley B.G., Thayer S.A.: Eur. J. Pharmacol.\n17. Graham G.G., Scott K.F.: Inflammopharmaco- 496, 33 (2004).\nlogy 11, 401 (2003). 45. Zygmunt P.M., Chuang H., Movahed P. et al.:\n18. Flower R.J., Vane J.R.: Nature 240, 410 (1972). Eur. J. Pharmacol. 396, 39 (2000).\n19. Lanz R., Polster P., Brune K.: Eur. J. 46. Bertolini A.",
+    "start_char": 55163,
+    "end_char": 56163,
+    "char_count": 1000,
+    "vector_id": 69
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "70",
+    "text": "003). 45. Zygmunt P.M., Chuang H., Movahed P. et al.:\n18. Flower R.J., Vane J.R.: Nature 240, 410 (1972). Eur. J. Pharmacol. 396, 39 (2000).\n19. Lanz R., Polster P., Brune K.: Eur. J. 46. Bertolini A., Ferrari A., Ottani A. et al.: CNS\nPharmacol. 130, 105 (1986). Drug Rev. 12, 250 (2006).\n\nParacetamol: mechanism of action, applications and safety concern 23\n47. Ovadia H., Wohlman A., Mechoulam R. et al.: 63. O\u00edBrien W.F., Krammer J., O\u00edLeary T.D. et al.:\nNeuropharmacology 34, 175 (1995). Am. J. Obstet. Gynecol. 168, 1164 (1993).\n48. Autret E., Reboul-Marty J., Henry-Launois B. 64. Forman J.P., Stampfer, M.J., Curhan, G.C.:\net al: Eur. J. Clin. Pharmacol. 51, 367 (1997). Hypertension 46, 500 (2005).\n49. Bjorkman R.: Acta Anaesthesiol. Scand. Suppl. 65. Chan A.T., Manson J.E., Albert C.M. et al.:\n103, 1 (1995). Circulation 113, 1578 (2006).\n50. Bujalska M.: Pol. J. Pharmacol. 56, 605 (2004). 66. Sudano I., Flammer A.J., Roas S. et al.: Curr.\n51. Smith H.S.: Pain Physician 12, 269 (2009).",
+    "start_char": 55963,
+    "end_char": 56963,
+    "char_count": 1000,
+    "vector_id": 70
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "71",
+    "text": "al.:\n103, 1 (1995). Circulation 113, 1578 (2006).\n50. Bujalska M.: Pol. J. Pharmacol. 56, 605 (2004). 66. Sudano I., Flammer A.J., Roas S. et al.: Curr.\n51. Smith H.S.: Pain Physician 12, 269 (2009). Hypertens. Rep. 14, 304 (2012).\n52. Moller P.L., Sindet-Pedersen S., Petersen C.T. 67. Hinz B., Brune K.: Trends Pharmacol. Sci. 29,\net al.: Br. J. Anaesth. 94, 642 (2005). 391 (2008).\n53. Pasero C., Stannard D.: Pain Management 68. Munsterhjelm E., Munsterhjelm N.M., Niemi\nNursing 13, 107 (2012). T.T. et al.: Anesthesiology 103, 712 (2005).\n54. Walson P.D., Jones J., Chesney R. et al.: Clin. 69. Rahme E., Barkun A., Nedjar H. et al.: Am. J.\nTher. 28, 762 (2006). Gastroenterol. 103, 872 (2008).\n55. Graham G.G., Scott K.F., Day R.O.: Drug 70. Sepp\u2030l\u2030 E., Nissil\u2030 M., Isom\u2030ki H. et al.: Clin.\nSafety 28, 227 (2005). Rheumatol. 4, 315 (1985).\n56. Davidson D.G., Eastham W.N.: Br. Med. J. 2, 71. Bj(cid:2)rnsson G.A., Haanaes H.R., Skoglund L.A.:\n497 (1966). Br. J. Clin. Pharmacol. 55, 405 (2003)",
+    "start_char": 56763,
+    "end_char": 57763,
+    "char_count": 999,
+    "vector_id": 71
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "72",
+    "text": "fety 28, 227 (2005). Rheumatol. 4, 315 (1985).\n56. Davidson D.G., Eastham W.N.: Br. Med. J. 2, 71. Bj(cid:2)rnsson G.A., Haanaes H.R., Skoglund L.A.:\n497 (1966). Br. J. Clin. Pharmacol. 55, 405 (2003).\n57. Mour G., Feinfeld D.A., Caraccio T. et al.: Ren. 72. Honor\u00c8 P., Buritova J., Besson J.M.: Pain 63,\nFail. 27, 381 (2005). 365 (1995).\n58. Mahadevan S.B., McKiernan P.J., Davies P. et 73. Scialli A.R., Ang R., Breitmeyer J. et al.:\nal.: Arch. Dis. Child.91, 598 (2006). Reprod. Toxicol., 30, 495 (2010a).\n59. Stirnimann G., Kessebohm K., Lauterburg B.: 74. Scialli A.R., Ang R., Breitmeyer J. et al.:\nSwiss Med. Wkly. 140, w13080 (2010). Reprod. Toxicol. 30, 508 (2010b).\n60. Waring W.S.: Expert Rev. Clin. Pharmacol. 5, 75. Kang E.M., Lundsberg L.S., Illuzzi J.L. et al.:\n311 (2012). Obstet. Gynecol. 114, 1295 (2009).\n61. Cannon C.P., Curtis S.P., FitzGerald G.A. et al.: 76. Larson A.M., Polson J., Fontana R.J. et al.:\nLancet 368, 1771 (2006). Hepatology 42, 1364 (2005).\n62. Gr(cid:1)en K.,",
+    "start_char": 57563,
+    "end_char": 58563,
+    "char_count": 999,
+    "vector_id": 72
+  },
+  {
+    "document_id": "0f788d35-799c-4404-b529-325913520573",
+    "filename": "paracetamol.pdf",
+    "chunk_id": "73",
+    "text": "ecol. 114, 1295 (2009).\n61. Cannon C.P., Curtis S.P., FitzGerald G.A. et al.: 76. Larson A.M., Polson J., Fontana R.J. et al.:\nLancet 368, 1771 (2006). Hepatology 42, 1364 (2005).\n62. Gr(cid:1)en K., Drvota V., Vesterqvist O.: 77. Heptonstall J.P.: B.M.J. 332, 795 (2006).\nProstaglandins 37, 311 (1989). 78. Brune K., Hinz B.: Ann. Rheum. Dis. 70, 1521\n(2011).\nReceived: 11. 04. 2013",
+    "start_char": 58363,
+    "end_char": 59363,
+    "char_count": 383,
+    "vector_id": 73
+  }
+]

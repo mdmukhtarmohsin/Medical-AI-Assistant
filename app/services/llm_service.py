@@ -22,12 +22,12 @@ class LLMService:
         genai.configure(api_key=settings.GEMINI_API_KEY)
         
         # Initialize the model
-        self.model = genai.GenerativeModel(settings.GEMINI_MODEL)
+        self.model = genai.GenerativeModel(settings.LLM_MODEL)
         
         # Generation configuration
         self.generation_config = {
-            "temperature": settings.GEMINI_TEMPERATURE,
-            "max_output_tokens": settings.GEMINI_MAX_TOKENS,
+            "temperature": settings.LLM_TEMPERATURE,
+            "max_output_tokens": settings.LLM_MAX_TOKENS,
         }
     
     def generate_answer(
@@ -157,10 +157,12 @@ ANSWER:"""
             # Extract page number from chunk metadata (if available)
             page_number = self._extract_page_number(chunk)
             
-            # Create content preview (first 200 characters)
-            content_preview = chunk.get('text', '')[:200]
-            if len(chunk.get('text', '')) > 200:
-                content_preview += "..."
+            # Create content preview (ensure it's max 200 characters)
+            full_text = chunk.get('text', '')
+            if len(full_text) > 197:  # Leave room for "..."
+                content_preview = full_text[:197] + "..."
+            else:
+                content_preview = full_text
             
             source = SourceReference(
                 document_id=chunk.get('document_id', ''),
