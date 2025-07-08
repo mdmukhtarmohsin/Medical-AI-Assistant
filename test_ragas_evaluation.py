@@ -8,7 +8,7 @@ import asyncio
 import json
 import requests
 import time
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import argparse
 
 
@@ -17,13 +17,14 @@ class RAGASEvaluationTester:
     
     def __init__(self, base_url: str = "http://localhost:8000"):
         """Initialize the tester with API base URL."""
-        self.base_url = base_url
+        self.base_url = base_url.rstrip('/')
+        self.api_base = f"{self.base_url}/api/v1"
         self.session = requests.Session()
     
     def test_health_check(self) -> bool:
         """Test if the API is responding."""
         try:
-            response = self.session.get(f"{self.base_url}/health")
+            response = self.session.get(f"{self.api_base}/health")
             if response.status_code == 200:
                 print("✅ API is healthy and responding")
                 return True
@@ -34,7 +35,7 @@ class RAGASEvaluationTester:
             print(f"❌ Cannot connect to API: {str(e)}")
             return False
     
-    def upload_test_document(self, file_path: str) -> str:
+    def upload_test_document(self, file_path: str) -> Optional[str]:
         """
         Upload a test document and return document ID.
         
@@ -47,7 +48,7 @@ class RAGASEvaluationTester:
         try:
             with open(file_path, 'rb') as file:
                 files = {'file': file}
-                response = self.session.post(f"{self.base_url}/upload", files=files)
+                response = self.session.post(f"{self.api_base}/upload", files=files)
                 
                 if response.status_code == 200:
                     result = response.json()
@@ -62,7 +63,7 @@ class RAGASEvaluationTester:
             print(f"❌ Error uploading document: {str(e)}")
             return None
     
-    def ask_question(self, document_id: str, question: str) -> Dict[str, Any]:
+    def ask_question(self, document_id: str, question: str) -> Optional[Dict[str, Any]]:
         """
         Ask a question about a document.
         
@@ -81,7 +82,7 @@ class RAGASEvaluationTester:
                 "temperature": 0.1
             }
             
-            response = self.session.post(f"{self.base_url}/ask", json=payload)
+            response = self.session.post(f"{self.api_base}/ask", json=payload)
             
             if response.status_code == 200:
                 result = response.json()
@@ -100,8 +101,8 @@ class RAGASEvaluationTester:
         question: str, 
         answer: str, 
         contexts: List[str], 
-        ground_truth: str = None
-    ) -> Dict[str, Any]:
+        ground_truth: Optional[str] = None
+    ) -> Optional[Dict[str, Any]]:
         """
         Evaluate a single Q&A response using RAGAS.
         
@@ -124,7 +125,7 @@ class RAGASEvaluationTester:
             if ground_truth:
                 payload["ground_truth"] = ground_truth
             
-            response = self.session.post(f"{self.base_url}/evaluate/single", data=payload)
+            response = self.session.post(f"{self.api_base}/evaluate/single", data=payload)
             
             if response.status_code == 200:
                 result = response.json()
@@ -142,7 +143,7 @@ class RAGASEvaluationTester:
         self, 
         document_id: str, 
         questions: List[str]
-    ) -> Dict[str, Any]:
+    ) -> Optional[Dict[str, Any]]:
         """
         Evaluate responses for a document using RAGAS.
         
@@ -158,7 +159,7 @@ class RAGASEvaluationTester:
             data = {"questions": questions}
             
             response = self.session.post(
-                f"{self.base_url}/evaluate/document/{document_id}", 
+                f"{self.api_base}/evaluate/document/{document_id}", 
                 data=data
             )
             
@@ -174,7 +175,7 @@ class RAGASEvaluationTester:
             print(f"❌ Error in document evaluation: {str(e)}")
             return None
     
-    def run_comprehensive_test(self, pdf_file_path: str = None):
+    def run_comprehensive_test(self, pdf_file_path: Optional[str] = None):
         """
         Run a comprehensive RAGAS evaluation test.
         
