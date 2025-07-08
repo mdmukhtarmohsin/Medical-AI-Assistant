@@ -8,11 +8,11 @@ This example shows how to:
 3. Interpret the results
 
 Prerequisites:
-    - Set GOOGLE_API_KEY environment variable
+    - Set GEMINI_API_KEY environment variable
     - Install: pip install ragas langchain-google-genai datasets
 
 Usage:
-    export GOOGLE_API_KEY="your-google-ai-api-key"
+    export GEMINI_API_KEY="your-google-ai-api-key"
     python examples/ragas_gemini_example.py
 """
 
@@ -25,10 +25,10 @@ def check_setup():
     print("🔍 Checking setup...")
     
     # Check API key
-    api_key = os.getenv("GOOGLE_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("❌ GOOGLE_API_KEY not found!")
-        print("   Please set it: export GOOGLE_API_KEY='your-api-key'")
+        print("❌ GEMINI_API_KEY not found!")
+        print("   Please set it: export GEMINI_API_KEY='your-api-key'")
         print("   Get your key from: https://aistudio.google.com/")
         return False
     
@@ -68,7 +68,7 @@ def setup_ragas_with_gemini():
     from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
     
     # Initialize Gemini models
-    api_key = os.getenv("GOOGLE_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     
     # LLM for evaluation
     llm = ChatGoogleGenerativeAI(

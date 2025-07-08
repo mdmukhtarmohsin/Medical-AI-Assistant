@@ -1,0 +1,24 @@
+{
+  "test_results": {
+    "Environment Setup": true,
+    "Manual RAGAS Config": false,
+    "Custom Evaluator": false,
+    "Evaluation Service": false,
+    "API Endpoints": false
+  },
+  "summary": {
+    "total_tests": 5,
+    "passed": 1,
+    "failed": 4,
+    "success_rate": "20.0%"
+  },
+  "timestamp": "2025-07-08T10:22:43.619165+00:00",
+  "recommendations": [
+    "1. Set up your Google API key: export GEMINI_API_KEY='your-key'",
+    "2. Install missing dependencies: pip install ragas langchain-google-genai datasets",
+    "3. Check internet connection and API key permissions",
+    "4. Ensure custom evaluator code is properly implemented",
+    "5. Check service configuration and dependencies",
+    "6. Start the FastAPI server: uvicorn app.main:app --reload"
+  ]
+}

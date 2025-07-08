@@ -15,7 +15,10 @@ from app.models.models import (
     EvaluationRequest, EvaluationResponse, BatchEvaluationReport
 )
 from config.settings import settings
-from app.services.evaluation_service import RAGASEvaluationService
+from app.services.vector_store import VectorStore
+from app.services.llm_service import LLMService
+from app.services.document_processor import DocumentProcessor
+from app.services.evaluation_service import evaluation_service
 
 logger = logging.getLogger(__name__)
 
@@ -25,8 +28,11 @@ router = APIRouter()
 # Global application instance (in production, use dependency injection)
 app_instance = None
 
-# Initialize evaluation service
-evaluation_service = RAGASEvaluationService()
+# Initialize services
+vector_store = VectorStore()
+llm_service = LLMService()
+doc_processor = DocumentProcessor()
+# evaluation_service is imported directly as a singleton
 
 def get_app() -> MedicalAIAssistant:
     """Get the application instance."""
@@ -289,44 +295,34 @@ async def evaluate_responses(
 ):
     """
     Evaluate a batch of questions and answers using RAGAS metrics.
-    
-    Args:
-        request: Evaluation request with questions, answers, and contexts
-        
-    Returns:
-        EvaluationResponse with RAGAS metrics
     """
     try:
-        # Validate request
-        if not request.questions or not request.answers or not request.contexts_list:
+        logger.info(f"Starting RAGAS evaluation for {len(request.questions)} questions")
+        
+        if not evaluation_service.is_available():
             raise HTTPException(
-                status_code=400,
-                detail="Questions, answers, and contexts are required"
+                status_code=503,
+                detail="Evaluation service is not available. Please check GEMINI_API_KEY configuration."
             )
         
-        if not (len(request.questions) == len(request.answers) == len(request.contexts_list)):
-            raise HTTPException(
-                status_code=400,
-                detail="Questions, answers, and contexts must have the same length"
-            )
+        # Validate input
+        if not request.questions or not request.generated_answers or not request.contexts:
+            raise HTTPException(status_code=400, detail="Questions, answers, and contexts are required")
         
-        # Run evaluation
-        evaluation_result = await evaluation_service.evaluate_batch(
-            questions=request.questions,
-            answers=request.answers,
-            contexts_list=request.contexts_list,
-            ground_truths=request.ground_truth_answers
-        )
+        if len(request.questions) != len(request.generated_answers) or len(request.questions) != len(request.contexts):
+            raise HTTPException(status_code=400, detail="Questions, answers, and contexts must have the same length")
         
+        # Evaluate using the evaluation service
+        evaluation_result = await evaluation_service.evaluate_rag_responses(request)
+        
+        logger.info(f"RAGAS evaluation completed successfully")
         return evaluation_result
-    
+        
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Evaluation failed: {str(e)}"
-        )
+        logger.error(f"RAGAS evaluation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Evaluation failed: {str(e)}")
 
 
 @router.post("/evaluate/single")
@@ -334,51 +330,55 @@ async def evaluate_single_response(
     question: str = Form(...),
     answer: str = Form(...),
     contexts: List[str] = Form(...),
-    ground_truth: Optional[str] = Form(None),
+    ground_truth: str = Form(None),
     app: MedicalAIAssistant = Depends(get_app)
 ):
     """
     Evaluate a single question-answer pair using RAGAS metrics.
     
     Args:
-        question: The question
-        answer: The generated answer
-        contexts: List of context chunks
+        question: The user question
+        answer: The generated answer  
+        contexts: List of context strings (one per line)
         ground_truth: Optional ground truth answer
-        
+    
     Returns:
-        EvaluationMetrics
+        Evaluation metrics for the single response
     """
     try:
-        if not question.strip() or not answer.strip():
+        logger.info("Starting single response evaluation")
+        
+        if not evaluation_service.is_available():
             raise HTTPException(
-                status_code=400,
-                detail="Question and answer cannot be empty"
+                status_code=503,
+                detail="Evaluation service is not available. Please check GEMINI_API_KEY configuration."
             )
         
-        if not contexts:
-            raise HTTPException(
-                status_code=400,
-                detail="At least one context is required"
-            )
-        
-        # Run single evaluation
+        # Evaluate the single response
         metrics = await evaluation_service.evaluate_single_response(
             question=question,
-            answer=answer,
-            contexts=contexts,
+            generated_answer=answer,
+            context=contexts,
             ground_truth=ground_truth
         )
         
-        return metrics
-    
+        # Return metrics as dict
+        result = {
+            "faithfulness": metrics.faithfulness,
+            "answer_relevancy": metrics.answer_relevancy, 
+            "context_relevancy": metrics.context_relevancy,
+            "context_recall": metrics.context_recall,
+            "overall_score": metrics.overall_score
+        }
+        
+        logger.info("Single response evaluation completed successfully")
+        return result
+        
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Single evaluation failed: {str(e)}"
-        )
+        logger.error(f"Single evaluation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Single evaluation failed: {str(e)}")
 
 
 @router.post("/evaluate/document/{document_id}")
@@ -393,127 +393,98 @@ async def evaluate_document_responses(
     Args:
         document_id: Document ID to evaluate
         questions: List of questions to ask about the document
-        
+    
     Returns:
-        BatchEvaluationReport with detailed results
+        Aggregated evaluation metrics for all questions
     """
     try:
-        # Validate document exists
-        doc_info = app.get_document_info(document_id)
-        if doc_info is None:
+        logger.info(f"Starting document evaluation for {document_id} with {len(questions)} questions")
+        
+        if not evaluation_service.is_available():
             raise HTTPException(
-                status_code=404,
-                detail="Document not found"
+                status_code=503,
+                detail="Evaluation service is not available. Please check GEMINI_API_KEY configuration."
             )
         
-        if not questions:
-            raise HTTPException(
-                status_code=400,
-                detail="At least one question is required"
-            )
-        
-        # Generate answers for all questions
-        answers = []
-        contexts_list = []
+        # Get answers for each question from the document
         results = []
+        successful_evaluations = 0
+        failed_evaluations = 0
+        all_scores = []
         
         for question in questions:
             try:
-                # Get answer from the assistant
-                answer_response = await app.ask_question(
-                    question=question,
-                    document_id=document_id,
-                    include_sources=True
-                )
+                # Get answer from document
+                response = await app.ask_question(question, document_id)
                 
-                answers.append(answer_response.answer)
-                
-                # Extract contexts from sources
-                contexts = [source.content_preview for source in answer_response.sources]
-                contexts_list.append(contexts)
-                
-                # Evaluate this single response
-                metrics = await evaluation_service.evaluate_single_response(
-                    question=question,
-                    answer=answer_response.answer,
-                    contexts=contexts
-                )
-                
-                # Check if it meets thresholds
-                meets_thresholds = evaluation_service._check_thresholds(metrics)
-                
-                results.append({
-                    'question': question,
-                    'answer': answer_response.answer,
-                    'contexts': contexts,
-                    'document_id': document_id,
-                    'metrics': metrics,
-                    'meets_thresholds': meets_thresholds
-                })
-                
+                if response.get("answer"):
+                    # Extract contexts from sources
+                    contexts = []
+                    if response.get("sources"):
+                        contexts = [source.get("content_preview", "") for source in response["sources"]]
+                    
+                    # Evaluate this single response
+                    metrics = await evaluation_service.evaluate_single_response(
+                        question=question,
+                        generated_answer=response["answer"],
+                        context=contexts
+                    )
+                    
+                    scores = {
+                        "faithfulness": metrics.faithfulness,
+                        "answer_relevancy": metrics.answer_relevancy,
+                        "context_relevancy": metrics.context_relevancy,
+                        "context_recall": metrics.context_recall,
+                        "overall_score": metrics.overall_score
+                    }
+                    
+                    all_scores.append(scores)
+                    successful_evaluations += 1
+                    
+                    results.append({
+                        "question": question,
+                        "answer": response["answer"],
+                        "metrics": scores
+                    })
+                else:
+                    failed_evaluations += 1
+                    logger.warning(f"No answer generated for question: {question}")
+                    
             except Exception as e:
-                logger.error(f"Error processing question '{question}': {str(e)}")
-                continue
+                failed_evaluations += 1
+                logger.error(f"Failed to evaluate question '{question}': {str(e)}")
         
-        if not results:
+        if successful_evaluations == 0:
             raise HTTPException(
                 status_code=500,
                 detail="Failed to evaluate any questions"
             )
         
-        # Calculate aggregate metrics
-        successful_evaluations = len(results)
-        total_evaluations = len(questions)
-        failed_evaluations = total_evaluations - successful_evaluations
+        # Calculate average metrics
+        avg_metrics = {}
+        if all_scores:
+            for metric in ["faithfulness", "answer_relevancy", "context_relevancy", "context_recall", "overall_score"]:
+                avg_metrics[metric] = sum(score[metric] for score in all_scores) / len(all_scores)
         
-        # Calculate averages
-        avg_faithfulness = sum(r['metrics'].faithfulness for r in results) / successful_evaluations
-        avg_answer_relevancy = sum(r['metrics'].answer_relevancy for r in results) / successful_evaluations
-        avg_context_relevancy = sum(r['metrics'].context_relevancy for r in results) / successful_evaluations
-        avg_context_recall = sum(r['metrics'].context_recall for r in results) / successful_evaluations
-        avg_overall_score = sum(r['metrics'].overall_score for r in results) / successful_evaluations
+        # Calculate threshold pass rate (assuming 0.7 threshold)
+        threshold_passes = sum(1 for score in all_scores if score["overall_score"] >= 0.7)
+        threshold_pass_rate = threshold_passes / len(all_scores) if all_scores else 0.0
         
-        threshold_pass_rate = sum(1 for r in results if r['meets_thresholds']) / successful_evaluations
+        result = {
+            "document_id": document_id,
+            "total_evaluations": len(questions),
+            "successful_evaluations": successful_evaluations,
+            "failed_evaluations": failed_evaluations,
+            "average_metrics": avg_metrics,
+            "threshold_pass_rate": threshold_pass_rate,
+            "detailed_results": results
+        }
         
-        # Create report
-        from app.models.models import EvaluationMetrics, BatchEvaluationResult, BatchEvaluationReport
+        logger.info(f"Document evaluation completed: {successful_evaluations}/{len(questions)} successful")
+        return result
         
-        average_metrics = EvaluationMetrics(
-            faithfulness=avg_faithfulness,
-            answer_relevancy=avg_answer_relevancy,
-            context_relevancy=avg_context_relevancy,
-            context_recall=avg_context_recall,
-            overall_score=avg_overall_score
-        )
-        
-        detailed_results = [
-            BatchEvaluationResult(
-                question=r['question'],
-                answer=r['answer'],
-                contexts=r['contexts'],
-                document_id=r['document_id'],
-                metrics=r['metrics'],
-                meets_thresholds=r['meets_thresholds']
-            )
-            for r in results
-        ]
-        
-        report = BatchEvaluationReport(
-            total_evaluations=total_evaluations,
-            successful_evaluations=successful_evaluations,
-            failed_evaluations=failed_evaluations,
-            average_metrics=average_metrics,
-            threshold_pass_rate=threshold_pass_rate,
-            report_timestamp=datetime.now(),
-            detailed_results=detailed_results
-        )
-        
-        return report
-    
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Document evaluation failed: {str(e)}"
-        ) 
+        logger.error(f"Document evaluation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Document evaluation failed: {str(e)}") 

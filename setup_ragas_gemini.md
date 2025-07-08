@@ -49,7 +49,7 @@ Updated `app/services/evaluation_service.py` to use Google Gemini instead of Ope
 ### 1. Set Up API Key
 
 ```bash
-export GOOGLE_API_KEY="your-google-ai-api-key"
+export GEMINI_API_KEY="your-google-ai-api-key"
 ```
 
 Get your API key from: https://aistudio.google.com/
@@ -139,7 +139,7 @@ evaluator = GeminiRagasEvaluator(
 
 ### Common Issues
 
-- **API Key Error**: Ensure `GOOGLE_API_KEY` is set
+- **API Key Error**: Ensure `GEMINI_API_KEY` is set
 - **Import Errors**: Dependencies should now be installed correctly
 - **Zero Scores**: Check API key validity and internet connection
 

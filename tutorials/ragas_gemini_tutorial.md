@@ -37,7 +37,7 @@ pip install ragas>=0.1.0 langchain-google-genai>=1.0.0 datasets>=2.0.0
 3. Set it as an environment variable:
 
 ```bash
-export GOOGLE_API_KEY="your-google-ai-api-key"
+export GEMINI_API_KEY="your-google-ai-api-key"
 ```
 
 ## Configuration
@@ -265,7 +265,7 @@ curl -X POST "http://localhost:8000/evaluation/evaluate" \
 ValueError: Gemini API key is required
 ```
 
-**Solution**: Set `GOOGLE_API_KEY` environment variable
+**Solution**: Set `GEMINI_API_KEY` environment variable
 
 2. **Import Errors**
 

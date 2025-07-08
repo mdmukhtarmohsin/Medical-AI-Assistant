@@ -5,14 +5,14 @@ instead of OpenAI, allowing for cost-effective and powerful evaluation.
 """
 
 import os
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Union
 try:
     from ragas.metrics import (
-        AnswerRelevancy,
         Faithfulness,
+        AnswerRelevancy,
         ContextPrecision,
         ContextRecall,
-        ContextRelevancy,
+        ContextRelevance,
         AnswerSimilarity,
         AnswerCorrectness
     )
@@ -24,8 +24,9 @@ try:
     from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
     from datasets import Dataset
     RAGAS_AVAILABLE = True
-except ImportError:
+except ImportError as e:
     RAGAS_AVAILABLE = False
+    print(f"⚠️  RAGAS dependencies not available: {e}")
 import logging
 
 logger = logging.getLogger(__name__)
@@ -102,7 +103,7 @@ class GeminiRagasEvaluator:
             Faithfulness(),           # Factual consistency with context
             AnswerRelevancy(),       # Relevance to the question
             ContextPrecision(),      # Precision of retrieved context
-            ContextRelevancy(),      # Relevance of context to question
+            ContextRelevance(),      # Relevance of context to question
             AnswerSimilarity(),      # Semantic similarity (requires ground truth)
             AnswerCorrectness()      # Overall correctness (requires ground truth)
         ]
@@ -261,7 +262,7 @@ class GeminiRagasEvaluator:
             Faithfulness(),
             AnswerRelevancy(),
             ContextPrecision(),
-            ContextRelevancy()
+            ContextRelevance()
         ]
         
         # Metrics that require ground truth
@@ -309,17 +310,17 @@ def create_gemini_evaluator(gemini_api_key: Optional[str] = None) -> GeminiRagas
     Factory function to create a Gemini RAGAS evaluator.
     
     Args:
-        gemini_api_key: Google AI API key (if not provided, will use GOOGLE_API_KEY env var)
+        gemini_api_key: Google AI API key (if not provided, will use GEMINI_API_KEY env var)
     
     Returns:
         Configured GeminiRagasEvaluator instance
     """
     if not gemini_api_key:
-        gemini_api_key = os.getenv("GOOGLE_API_KEY")
+        gemini_api_key = os.getenv("GEMINI_API_KEY")
         
     if not gemini_api_key:
         raise ValueError(
-            "Gemini API key is required. Either pass it directly or set GOOGLE_API_KEY environment variable."
+            "Gemini API key is required. Either pass it directly or set GEMINI_API_KEY environment variable."
         )
     
     return GeminiRagasEvaluator(gemini_api_key=gemini_api_key)

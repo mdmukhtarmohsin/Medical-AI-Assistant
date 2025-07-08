@@ -9,7 +9,7 @@ Usage:
     python test_ragas_gemini.py
 
 Environment Variables Required:
-    GOOGLE_API_KEY: Your Google AI API key
+    GEMINI_API_KEY: Your Google AI API key (can be set in .env file)
 
 Author: Medical AI Assistant Development Team
 """
@@ -17,21 +17,29 @@ Author: Medical AI Assistant Development Team
 import os
 import asyncio
 import json
-from datetime import datetime
+from datetime import datetime, UTC
 from typing import Dict, List, Any
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+    print("✅ Loaded environment variables from .env file")
+except ImportError:
+    print("⚠️  python-dotenv not available, relying on system environment variables")
 
 def test_environment():
     """Test environment setup and dependencies."""
     print("🔍 Testing Environment Setup...")
     
     # Check API key
-    api_key = os.getenv("GOOGLE_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("❌ GOOGLE_API_KEY environment variable not set")
-        print("   Please set it: export GOOGLE_API_KEY='your-api-key'")
+        print("❌ GEMINI_API_KEY environment variable not set")
+        print("   Please set it in .env file or: export GEMINI_API_KEY='your-api-key'")
         return False
     else:
-        print(f"✅ GOOGLE_API_KEY found (length: {len(api_key)})")
+        print(f"✅ GEMINI_API_KEY found (length: {len(api_key)})")
     
     # Check dependencies
     dependencies = [
@@ -66,7 +74,7 @@ def test_manual_ragas_config():
             Faithfulness,
             AnswerRelevancy,
             ContextPrecision,
-            ContextRelevancy
+            ContextRelevance
         )
         from ragas.llms import LangchainLLMWrapper
         from ragas.embeddings import LangchainEmbeddingsWrapper
@@ -77,7 +85,7 @@ def test_manual_ragas_config():
         print("✅ All RAGAS imports successful")
         
         # Initialize Gemini models
-        api_key = os.getenv("GOOGLE_API_KEY")
+        api_key = os.getenv("GEMINI_API_KEY")
         
         llm = ChatGoogleGenerativeAI(
             model="gemini-2.0-flash-exp",
@@ -104,7 +112,7 @@ def test_manual_ragas_config():
             Faithfulness(),
             AnswerRelevancy(),
             ContextPrecision(),
-            ContextRelevancy()
+            ContextRelevance()
         ]
         
         # Configure each metric
@@ -248,6 +256,7 @@ async def test_evaluation_service():
     
     try:
         from app.services.evaluation_service import evaluation_service
+        from app.models.models import EvaluationRequest
         
         print("✅ Evaluation service imported")
         
@@ -270,7 +279,7 @@ async def test_evaluation_service():
             # Test batch evaluation
             print("🔄 Testing batch evaluation...")
             
-            batch_metrics = await evaluation_service.evaluate_rag_responses(
+            evaluation_request = EvaluationRequest(
                 questions=["What is cholesterol?", "What causes high cholesterol?"],
                 generated_answers=[
                     "Cholesterol is a waxy substance found in blood that's needed for building cells.",
@@ -281,6 +290,8 @@ async def test_evaluation_service():
                     ["Cholesterol levels are influenced by dietary intake, genetic factors, physical activity, and underlying health conditions."]
                 ]
             )
+            
+            batch_metrics = await evaluation_service.evaluate_rag_responses(evaluation_request)
             
             print("✅ Batch evaluation successful!")
             print(f"📊 Batch Metrics: {batch_metrics}")
@@ -366,7 +377,7 @@ def generate_test_report(results: Dict[str, bool]):
     print("\n💡 Recommendations:")
     
     if not results.get("Environment Setup", False):
-        print("1. Set up your Google API key: export GOOGLE_API_KEY='your-key'")
+        print("1. Set up your Google API key: export GEMINI_API_KEY='your-key'")
         print("2. Install missing dependencies: pip install ragas langchain-google-genai datasets")
     
     if not results.get("Manual RAGAS Config", False):
@@ -382,19 +393,27 @@ def generate_test_report(results: Dict[str, bool]):
         print("6. Start the FastAPI server: uvicorn app.main:app --reload")
     
     # Save report to file
-    report_data = {
-        "timestamp": datetime.utcnow().isoformat(),
-        "results": results,
+    report = {
+        "test_results": results,
         "summary": {
-            "total": total_tests,
-            "passed": passed_tests,
-            "failed": failed_tests,
-            "success_rate": (passed_tests/total_tests)*100
-        }
+            "total_tests": len(results),
+            "passed": len([r for r in results.values() if r]),
+            "failed": len([r for r in results.values() if not r]),
+            "success_rate": f"{len([r for r in results.values() if r]) / len(results) * 100:.1f}%"
+        },
+        "timestamp": datetime.now(UTC).isoformat(),
+        "recommendations": [
+            "1. Set up your Google API key: export GEMINI_API_KEY='your-key'",
+            "2. Install missing dependencies: pip install ragas langchain-google-genai datasets",
+            "3. Check internet connection and API key permissions",
+            "4. Ensure custom evaluator code is properly implemented",
+            "5. Check service configuration and dependencies",
+            "6. Start the FastAPI server: uvicorn app.main:app --reload"
+        ]
     }
     
     with open("test_report.json", "w") as f:
-        json.dump(report_data, f, indent=2)
+        json.dump(report, f, indent=2)
     
     print(f"\n📁 Detailed report saved to: test_report.json")
 

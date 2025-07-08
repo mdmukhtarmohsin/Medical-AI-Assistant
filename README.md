@@ -1,6 +1,6 @@
 # 🏥 Medical AI Assistant
 
-An AI-powered medical document Q&A assistant using RAG (Retrieval-Augmented Generation) and Google Gemini. This application allows healthcare professionals to upload medical documents and ask questions to get AI-generated answers with source citations.
+An intelligent medical document analysis system powered by **Google Gemini**, **FAISS**, and **RAGAS evaluation**. Upload PDF documents and get accurate, cited answers to medical questions using state-of-the-art RAG (Retrieval-Augmented Generation) technology.
 
 ## 🖼️ Screenshots
 
@@ -13,14 +13,29 @@ Here are example screenshots of the Medical AI Assistant:
 
 ## ✨ Features
 
-- **📄 PDF Document Upload**: Upload and process medical PDF documents
-- **🤖 AI-Powered Q&A**: Ask questions about uploaded documents using Google Gemini 2.0 Flash
-- **🔍 Semantic Search**: FAISS-based vector similarity search for relevant content retrieval
-- **📚 Source Citations**: Get answers with references to specific document sections
-- **📊 Document Management**: View, manage, and delete uploaded documents
-- **⚡ Real-time Processing**: Instant document processing and indexing
-- **🔄 Health Monitoring**: System health checks and performance metrics
-- **📱 RESTful API**: Complete REST API with interactive documentation
+### 🔍 **Document Intelligence**
+
+- **PDF Upload & Processing**: Extract and index medical documents
+- **Semantic Search**: Find relevant content using advanced embeddings
+- **Multi-Document Support**: Query across multiple documents simultaneously
+
+### 🤖 **AI-Powered Q&A**
+
+- **Google Gemini 2.0**: Latest AI model for medical question answering
+- **Source Citations**: Every answer includes document references
+- **Context-Aware**: Understands medical terminology and concepts
+
+### 📊 **Quality Assessment**
+
+- **RAGAS Evaluation**: Comprehensive RAG pipeline evaluation using Google Gemini
+- **Quality Metrics**: Faithfulness, relevancy, precision, and recall scores
+- **Performance Monitoring**: Track system performance over time
+
+### 🔧 **Developer-Friendly**
+
+- **FastAPI Backend**: Modern, fast, and well-documented API
+- **Interactive Docs**: Swagger UI and ReDoc for easy testing
+- **Extensible Architecture**: Easy to customize and extend
 
 ## 🛠️ Technical Stack
 
@@ -40,26 +55,16 @@ Here are example screenshots of the Medical AI Assistant:
 
 ## 🚀 Quick Start
 
-### 1. Clone the Repository
+### 1. Automatic Setup (Recommended)
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/Medical-AI-Assistant.git
 cd Medical-AI-Assistant
+chmod +x setup.sh
+./setup.sh
 ```
 
-### 2. Get Google Gemini API Key
-
-1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Create an API key
-3. Keep it handy for the next step
-
-### 3. Run the Startup Script
-
-```bash
-./start.sh
-```
-
-The script will:
+The setup script will:
 
 - Create a Python virtual environment
 - Install all dependencies
@@ -67,7 +72,7 @@ The script will:
 - Set up environment configuration
 - Start the application
 
-### 4. Configure Environment
+### 2. Configure Environment
 
 When prompted, edit the `.env` file and add your Gemini API key:
 
@@ -75,7 +80,9 @@ When prompted, edit the `.env` file and add your Gemini API key:
 GEMINI_API_KEY=your_actual_api_key_here
 ```
 
-### 5. Access the Application
+Get your API key from: https://aistudio.google.com/
+
+### 3. Access the Application
 
 - **Main Application**: http://localhost:8000
 - **API Documentation**: http://localhost:8000/docs
@@ -138,6 +145,19 @@ curl -X POST "http://localhost:8000/api/v1/ask" \
      -d '{
        "question": "What are the side effects of this medication?",
        "document_id": "optional-specific-document-id"
+     }'
+```
+
+### Evaluate RAG Performance
+
+```bash
+curl -X POST "http://localhost:8000/api/v1/evaluate" \
+     -H "accept: application/json" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "questions": ["What are the symptoms?"],
+       "generated_answers": ["Common symptoms include..."],
+       "contexts": [["Medical context..."]]
      }'
 ```
 

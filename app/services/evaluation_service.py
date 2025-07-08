@@ -4,7 +4,7 @@ from typing import Dict, List, Optional, Any, TYPE_CHECKING
 import time
 from datetime import datetime
 
-from ..config import settings
+from config.settings import settings
 from ..models.models import EvaluationMetrics, EvaluationRequest, EvaluationResponse
 
 # Import custom Gemini RAGAS evaluator
@@ -37,7 +37,7 @@ class EvaluationService:
             # Get Google API key from settings
             google_api_key = getattr(settings, 'GEMINI_API_KEY', None)
             if not google_api_key:
-                logger.warning("GOOGLE_API_KEY not found in settings. Evaluation will be disabled.")
+                logger.warning("GEMINI_API_KEY not found in settings. Evaluation will be disabled.")
                 return
                 
             # Create the evaluator
