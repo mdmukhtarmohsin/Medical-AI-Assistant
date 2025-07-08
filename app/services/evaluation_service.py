@@ -1,84 +1,124 @@
-"""
-RAGAS evaluation service for the Medical AI Assistant.
-"""
-import time
+"""Evaluation service using RAGAS with Google Gemini."""
 import logging
-from typing import List, Dict, Any, Optional
+from typing import Dict, List, Optional, Any, TYPE_CHECKING
+import time
 from datetime import datetime
-import asyncio
 
-from ragas import evaluate
-from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall
-from datasets import Dataset
-import pandas as pd
+from ..config import settings
+from ..models.models import EvaluationMetrics, EvaluationRequest, EvaluationResponse
 
-from config.settings import settings
-from app.models.models import EvaluationMetrics, EvaluationRequest, EvaluationResponse
+# Import custom Gemini RAGAS evaluator
+if TYPE_CHECKING:
+    from ..evaluation.custom_ragas_config import GeminiRagasEvaluator
+
+try:
+    from ..evaluation.custom_ragas_config import create_gemini_evaluator, GeminiRagasEvaluator
+    GEMINI_RAGAS_AVAILABLE = True
+except ImportError:
+    GEMINI_RAGAS_AVAILABLE = False
 
 logger = logging.getLogger(__name__)
 
-
-class RAGASEvaluationService:
-    """Service for evaluating responses using RAGAS metrics."""
+class EvaluationService:
+    """Service for evaluating RAG responses using RAGAS with Google Gemini."""
     
     def __init__(self):
-        """Initialize the RAGAS evaluation service."""
-        self.metrics = [faithfulness, answer_relevancy, context_precision, context_recall]
-        
+        """Initialize the evaluation service."""
+        self.evaluator: Optional["GeminiRagasEvaluator"] = None
+        self._initialize_evaluator()
+    
+    def _initialize_evaluator(self):
+        """Initialize the Gemini RAGAS evaluator."""
+        if not GEMINI_RAGAS_AVAILABLE:
+            logger.warning("Gemini RAGAS evaluator not available. Evaluation will be disabled.")
+            return
+            
+        try:
+            # Get Google API key from settings
+            google_api_key = getattr(settings, 'GEMINI_API_KEY', None)
+            if not google_api_key:
+                logger.warning("GOOGLE_API_KEY not found in settings. Evaluation will be disabled.")
+                return
+                
+            # Create the evaluator
+            self.evaluator = create_gemini_evaluator(gemini_api_key=google_api_key)
+            
+            # Validate configuration
+            if self.evaluator and self.evaluator.validate_configuration():
+                logger.info("✅ Gemini RAGAS evaluator initialized successfully")
+            else:
+                logger.error("❌ Gemini RAGAS evaluator validation failed")
+                self.evaluator = None
+                
+        except Exception as e:
+            logger.error(f"Failed to initialize Gemini RAGAS evaluator: {e}")
+            self.evaluator = None
+    
+    def is_available(self) -> bool:
+        """Check if evaluation service is available."""
+        return self.evaluator is not None
+    
     async def evaluate_single_response(
         self,
         question: str,
-        answer: str,
-        contexts: List[str],
+        generated_answer: str,
+        context: List[str],
         ground_truth: Optional[str] = None
     ) -> EvaluationMetrics:
         """
-        Evaluate a single Q&A response using RAGAS metrics.
+        Evaluate a single RAG response.
         
         Args:
-            question: The user's question
-            answer: The generated answer
-            contexts: List of context chunks used for generation
+            question: The user question
+            generated_answer: The generated answer
+            context: List of context strings used for generation
             ground_truth: Optional ground truth answer
             
         Returns:
             EvaluationMetrics with RAGAS scores
         """
+        if not self.is_available() or not self.evaluator:
+            logger.warning("Evaluation service not available, returning zero scores")
+            return EvaluationMetrics(
+                faithfulness=0.0,
+                answer_relevancy=0.0,
+                context_relevancy=0.0,
+                context_recall=0.0,
+                overall_score=0.0
+            )
+        
         try:
-            # Use the generated answer as ground truth if not provided
-            if ground_truth is None:
-                ground_truth = answer
-            
-            # Prepare data for RAGAS evaluation
-            data = {
-                "question": [question],
-                "answer": [answer],
-                "contexts": [contexts],
-                "ground_truth": [ground_truth]
-            }
-            
-            dataset = Dataset.from_dict(data)
-            
-            # Run RAGAS evaluation in a separate thread to avoid blocking
-            result = await asyncio.get_event_loop().run_in_executor(
-                None, evaluate, dataset, self.metrics
+            # Perform evaluation
+            scores = self.evaluator.evaluate_single(
+                question=question,
+                answer=generated_answer,
+                contexts=context,
+                ground_truth=ground_truth
             )
             
-            # Extract metrics
-            metrics = EvaluationMetrics(
-                faithfulness=float(result.get('faithfulness', 0.0)),
-                answer_relevancy=float(result.get('answer_relevancy', 0.0)),
-                context_relevancy=float(result.get('context_precision', 0.0)),
-                context_recall=float(result.get('context_recall', 0.0)),
-                overall_score=self._calculate_overall_score(result)
-            )
+            # Map RAGAS scores to our metrics model
+            faithfulness = scores.get('faithfulness', 0.0)
+            answer_relevancy = scores.get('answer_relevancy', 0.0)
+            context_relevancy = scores.get('context_relevancy', 0.0)
+            context_recall = scores.get('context_recall', 0.0) if ground_truth else 0.0
             
-            logger.info(f"RAGAS evaluation completed: {metrics}")
-            return metrics
+            # Calculate overall score as average of available metrics
+            available_scores = [faithfulness, answer_relevancy, context_relevancy]
+            if ground_truth:
+                available_scores.append(context_recall)
+            
+            overall_score = sum(available_scores) / len(available_scores) if available_scores else 0.0
+            
+            return EvaluationMetrics(
+                faithfulness=faithfulness,
+                answer_relevancy=answer_relevancy,
+                context_relevancy=context_relevancy,
+                context_recall=context_recall,
+                overall_score=overall_score
+            )
             
         except Exception as e:
-            logger.warning(f"RAGAS evaluation failed: {str(e)}")
-            # Return default metrics if RAGAS fails
+            logger.error(f"Error during response evaluation: {e}")
             return EvaluationMetrics(
                 faithfulness=0.0,
                 answer_relevancy=0.0,
@@ -87,77 +127,90 @@ class RAGASEvaluationService:
                 overall_score=0.0
             )
     
-    async def evaluate_batch(
+    async def evaluate_rag_responses(
         self,
-        questions: List[str],
-        answers: List[str],
-        contexts_list: List[List[str]],
-        ground_truths: Optional[List[str]] = None
+        evaluation_request: EvaluationRequest
     ) -> EvaluationResponse:
         """
-        Evaluate a batch of Q&A responses.
+        Evaluate multiple RAG responses and return aggregated metrics.
         
         Args:
-            questions: List of questions
-            answers: List of generated answers
-            contexts_list: List of context lists for each question
-            ground_truths: Optional list of ground truth answers
+            evaluation_request: Request containing questions, answers, and contexts
             
         Returns:
             EvaluationResponse with aggregated metrics
         """
+        if not self.is_available() or not self.evaluator:
+            logger.warning("Evaluation service not available, returning zero scores")
+            return EvaluationResponse(
+                metrics=EvaluationMetrics(
+                    faithfulness=0.0,
+                    answer_relevancy=0.0,
+                    context_relevancy=0.0,
+                    context_recall=0.0,
+                    overall_score=0.0
+                ),
+                evaluation_timestamp=datetime.now(),
+                sample_size=0,
+                meets_quality_thresholds=False,
+                processing_time_ms=0
+            )
+        
         start_time = time.time()
         
         try:
-            # Validate input lengths
-            if not (len(questions) == len(answers) == len(contexts_list)):
-                raise ValueError("All input lists must have the same length")
-            
-            if ground_truths is None:
-                ground_truths = answers.copy()
-            elif len(ground_truths) != len(questions):
-                raise ValueError("Ground truths list must have the same length as questions")
-            
-            # Prepare data for RAGAS evaluation
-            data = {
-                "question": questions,
-                "answer": answers,
-                "contexts": contexts_list,
-                "ground_truth": ground_truths
-            }
-            
-            dataset = Dataset.from_dict(data)
-            
-            # Run RAGAS evaluation
-            result = await asyncio.get_event_loop().run_in_executor(
-                None, evaluate, dataset, self.metrics
+            # Perform batch evaluation
+            scores = self.evaluator.evaluate_batch(
+                questions=evaluation_request.questions,
+                answers=evaluation_request.generated_answers,
+                contexts=evaluation_request.contexts,
+                ground_truths=evaluation_request.ground_truths
             )
             
-            # Calculate aggregated metrics
+            # Map RAGAS scores to our metrics model
+            faithfulness = scores.get('faithfulness', 0.0)
+            answer_relevancy = scores.get('answer_relevancy', 0.0)
+            context_relevancy = scores.get('context_relevancy', 0.0)
+            context_recall = scores.get('context_recall', 0.0)
+            
+            # Calculate overall score
+            available_scores = [faithfulness, answer_relevancy, context_relevancy]
+            if evaluation_request.ground_truths:
+                available_scores.append(context_recall)
+            
+            overall_score = sum(available_scores) / len(available_scores) if available_scores else 0.0
+            
+            # Create metrics
             metrics = EvaluationMetrics(
-                faithfulness=float(result.get('faithfulness', 0.0)),
-                answer_relevancy=float(result.get('answer_relevancy', 0.0)),
-                context_relevancy=float(result.get('context_precision', 0.0)),
-                context_recall=float(result.get('context_recall', 0.0)),
-                overall_score=self._calculate_overall_score(result)
+                faithfulness=faithfulness,
+                answer_relevancy=answer_relevancy,
+                context_relevancy=context_relevancy,
+                context_recall=context_recall,
+                overall_score=overall_score
             )
             
-            processing_time = int((time.time() - start_time) * 1000)
+            # Calculate processing time
+            processing_time_ms = int((time.time() - start_time) * 1000)
             
-            # Check if metrics meet thresholds
-            meets_thresholds = self._check_thresholds(metrics)
+            # Check quality thresholds (adjust these as needed)
+            meets_thresholds = (
+                faithfulness >= 0.7 and
+                answer_relevancy >= 0.7 and
+                context_relevancy >= 0.7 and
+                overall_score >= 0.7
+            )
             
             return EvaluationResponse(
                 metrics=metrics,
                 evaluation_timestamp=datetime.now(),
-                sample_size=len(questions),
+                sample_size=len(evaluation_request.questions),
                 meets_quality_thresholds=meets_thresholds,
-                processing_time_ms=processing_time
+                processing_time_ms=processing_time_ms
             )
             
         except Exception as e:
-            logger.error(f"Batch evaluation failed: {str(e)}")
-            processing_time = int((time.time() - start_time) * 1000)
+            logger.error(f"Error during batch evaluation: {e}")
+            processing_time_ms = int((time.time() - start_time) * 1000)
             
             return EvaluationResponse(
                 metrics=EvaluationMetrics(
@@ -168,77 +221,70 @@ class RAGASEvaluationService:
                     overall_score=0.0
                 ),
                 evaluation_timestamp=datetime.now(),
-                sample_size=len(questions),
+                sample_size=len(evaluation_request.questions),
                 meets_quality_thresholds=False,
-                processing_time_ms=processing_time
+                processing_time_ms=processing_time_ms
             )
     
-    def _calculate_overall_score(self, result: Dict[str, Any]) -> float:
-        """Calculate overall score from RAGAS metrics."""
-        metrics = [
-            result.get('faithfulness', 0.0),
-            result.get('answer_relevancy', 0.0),
-            result.get('context_precision', 0.0),
-            result.get('context_recall', 0.0)
-        ]
+    def get_metrics_info(self) -> Dict[str, Any]:
+        """
+        Get information about available evaluation metrics.
         
-        # Calculate weighted average (you can adjust weights based on importance)
-        weights = [0.3, 0.25, 0.25, 0.2]  # Slightly more weight on faithfulness
+        Returns:
+            Dictionary containing metrics information
+        """
+        if not self.is_available():
+            return {
+                "available": False,
+                "error": "Evaluation service not available",
+                "metrics": []
+            }
         
-        overall = sum(m * w for m, w in zip(metrics, weights))
-        return float(overall)
-    
-    def _check_thresholds(self, metrics: EvaluationMetrics) -> bool:
-        """Check if metrics meet quality thresholds."""
-        return (
-            metrics.faithfulness >= settings.RAGAS_FAITHFULNESS_THRESHOLD and
-            metrics.context_relevancy >= settings.RAGAS_CONTEXT_PRECISION_THRESHOLD
-        )
-    
-    def create_evaluation_report(self, results: List[Dict[str, Any]]) -> str:
-        """Create a detailed evaluation report."""
-        if not results:
-            return "No evaluation results to report."
-        
-        df = pd.DataFrame(results)
-        
-        # Calculate summary statistics
-        summary = {
-            'total_questions': len(results),
-            'avg_faithfulness': df['faithfulness'].mean(),
-            'avg_answer_relevancy': df['answer_relevancy'].mean(),
-            'avg_context_relevancy': df['context_relevancy'].mean(),
-            'avg_context_recall': df['context_recall'].mean(),
-            'avg_overall_score': df['overall_score'].mean(),
-            'meets_thresholds_count': df['meets_thresholds'].sum(),
-            'meets_thresholds_percent': (df['meets_thresholds'].sum() / len(results)) * 100
+        metrics_info = {
+            "available": True,
+            "model_used": getattr(self.evaluator, 'llm_model', 'gemini-2.0-flash-exp'),
+            "embedding_model": getattr(self.evaluator, 'embedding_model', 'models/embedding-001'),
+            "metrics": [
+                {
+                    "name": "Faithfulness",
+                    "description": "Measures factual consistency of the answer with the given context",
+                    "requires_ground_truth": False
+                },
+                {
+                    "name": "AnswerRelevancy", 
+                    "description": "Assesses how pertinent the answer is to the given question",
+                    "requires_ground_truth": False
+                },
+                {
+                    "name": "ContextPrecision",
+                    "description": "Evaluates the precision of the retrieved context",
+                    "requires_ground_truth": False
+                },
+                {
+                    "name": "ContextRelevancy",
+                    "description": "Measures how relevant the context is to the question",
+                    "requires_ground_truth": False
+                },
+                {
+                    "name": "ContextRecall",
+                    "description": "Assesses the extent to which relevant context is retrieved",
+                    "requires_ground_truth": True
+                },
+                {
+                    "name": "AnswerSimilarity",
+                    "description": "Quantifies semantic similarity between generated and expected answers",
+                    "requires_ground_truth": True
+                },
+                {
+                    "name": "AnswerCorrectness",
+                    "description": "Focuses on factual accuracy of the generated answer",
+                    "requires_ground_truth": True
+                }
+            ]
         }
         
-        report = f"""
-=== RAGAS EVALUATION REPORT ===
+        return metrics_info
 
-Total Questions Evaluated: {summary['total_questions']}
-Questions Meeting Thresholds: {summary['meets_thresholds_count']} ({summary['meets_thresholds_percent']:.1f}%)
 
-AVERAGE METRICS:
-- Faithfulness: {summary['avg_faithfulness']:.3f} (threshold: {settings.RAGAS_FAITHFULNESS_THRESHOLD})
-- Answer Relevancy: {summary['avg_answer_relevancy']:.3f}
-- Context Relevancy: {summary['avg_context_relevancy']:.3f} (threshold: {settings.RAGAS_CONTEXT_PRECISION_THRESHOLD})
-- Context Recall: {summary['avg_context_recall']:.3f}
-- Overall Score: {summary['avg_overall_score']:.3f}
-
-QUALITY ASSESSMENT:
-"""
-        
-        if summary['meets_thresholds_percent'] >= 80:
-            report += "✅ EXCELLENT: System meets quality thresholds for most questions\n"
-        elif summary['meets_thresholds_percent'] >= 60:
-            report += "⚠️  GOOD: System meets quality thresholds for majority of questions\n"
-        elif summary['meets_thresholds_percent'] >= 40:
-            report += "⚠️  FAIR: System needs improvement in quality metrics\n"
-        else:
-            report += "❌ POOR: System requires significant improvement\n"
-        
-        report += "\n" + "="*50
-        
-        return report 
+# Global evaluation service instance
+evaluation_service = EvaluationService() 

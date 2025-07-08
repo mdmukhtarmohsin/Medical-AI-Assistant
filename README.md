@@ -2,6 +2,15 @@
 
 An AI-powered medical document Q&A assistant using RAG (Retrieval-Augmented Generation) and Google Gemini. This application allows healthcare professionals to upload medical documents and ask questions to get AI-generated answers with source citations.
 
+## 🖼️ Screenshots
+
+Here are example screenshots of the Medical AI Assistant:
+
+- ![Screenshot 1](./med1.png)
+- ![Screenshot 2](./med2.png)
+- ![Screenshot 3](./med3.png)
+- ![Screenshot 4](./med4.png)
+
 ## ✨ Features
 
 - **📄 PDF Document Upload**: Upload and process medical PDF documents
