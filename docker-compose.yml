@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  medical-ai-assistant:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./documents:/app/documents
+      - ./faiss_index:/app/faiss_index
+      - ./logs:/app/logs
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - UPLOAD_DIR=/app/documents
+      - FAISS_INDEX_DIR=/app/faiss_index
+      - LOGS_DIR=/app/logs
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
